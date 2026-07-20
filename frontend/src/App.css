@@ -1,0 +1,4 @@
+/* Vedanta — component-level styles kept minimal; core styling in index.css + Tailwind */
+.App {
+  min-height: 100vh;
+}
