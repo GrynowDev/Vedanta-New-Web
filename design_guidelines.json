@@ -1,0 +1,201 @@
+{
+  "theme": "dark_earthy_luxury",
+  "mood": "Luxury, Warm, Earthy, Natural, Peaceful, Premium, Minimal, Healthy Living, Nature First, Timeless",
+  "brand": {
+    "name": "Vedanta by Vaishno Group",
+    "taglines": [
+      "Where Luxury Breathes with Nature",
+      "A paradise in heaven",
+      "Luxury Elegant Chateau in Himalayas",
+      "Villas by Invitation Only"
+    ]
+  },
+  "colors": {
+    "primary": "#1A362D",
+    "secondary": "#F9F6F0",
+    "accent": "#D4AF37",
+    "additional": {
+      "stone_grey": "#8B8C89",
+      "natural_wood": "#8B5A2B",
+      "slate_black": "#1A1A1A",
+      "glass_light": "rgba(249, 246, 240, 0.1)",
+      "glass_dark": "rgba(26, 54, 45, 0.6)"
+    },
+    "text": {
+      "main": "#F9F6F0",
+      "muted": "#8B8C89",
+      "inverse": "#1A362D",
+      "accent": "#D4AF37"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Cormorant Garamond, serif",
+      "body": "Outfit, sans-serif",
+      "accent": "Playfair Display, serif"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter leading-none",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl font-normal tracking-wide",
+      "body": "text-base sm:text-lg font-light leading-relaxed tracking-wide",
+      "overline": "text-xs sm:text-sm uppercase tracking-[0.3em] font-medium"
+    },
+    "instructions": "Never use Inter, Roboto, or Open Sans for headings. Use Cormorant Garamond for all primary headings to establish an editorial, luxury magazine aesthetic. Keep body text thin and elegant with Outfit."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use high-end glassmorphism: bg-[#1A362D]/40 backdrop-blur-xl border border-[#D4AF37]/20 shadow-2xl. Do NOT use muddy gray transparency.",
+    "borders": "1px delicate borders using Champagne Gold at 20% opacity or Stone Grey. Avoid thick or solid borders.",
+    "shadows": "Deep, soft ambient shadows. shadow-[0_20px_50px_rgba(0,0,0,0.3)] for floating elements.",
+    "border_radius": "rounded-2xl or rounded-3xl for cards to soften the aesthetic, contrasting with sharp elegant typography.",
+    "textures": "Subtle film grain noise overlay across the entire site to kill digital flatness and enhance the cinematic feel."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Implement Lenis smooth scrolling for premium weight and momentum.",
+    "animations": "Slow, deliberate fade-ins and gentle Y-axis reveals (duration 1.2s, ease [0.16, 1, 0.3, 1]). Avoid bouncy, fast, or flashy animations.",
+    "hover_effects": "Image scaling within hidden overflow containers (scale 1.05 duration 0.8s). Text color transitions to Champagne Gold.",
+    "parallax": "Heavy use of parallax on hero backgrounds, large photography, and section transitions.",
+    "micro_interactions": "Subtle falling snow or forest mist particle effect in the background of the hero and winter sections. Floating ambient sound toggle (soft forest acoustics)."
+  },
+  "layouts": {
+    "spacing": "Ultra-generous spacing. Use py-24 to py-32 for section padding. gap-12 to gap-24 for grid items. Allow content to breathe.",
+    "grids": "Editorial bento grids and asymmetric layouts. Avoid standard Bootstrap equal columns. Use 12-column CSS grids where images span 7 columns and text spans 4 with an offset.",
+    "alignment": "Mix center-aligned statement text with left-aligned editorial content. Use optical alignment for maximum elegance."
+  },
+  "components": {
+    "buttons": "Pill-shaped (rounded-full) or elegant thin-bordered rectangles. Primary: Solid Champagne Gold with Forest Green text. Secondary: Transparent with Champagne Gold border and white text. Add magnetic hover effects if possible.",
+    "cards": "Image-backed glassmorphic cards. The image should serve as the card's soul, with text elegantly resting on a gradient overlay at the bottom.",
+    "navigation": "Sticky elegant glass header (backdrop-blur-xl bg-[#1A1A1A]/80) after scrolling past hero. Must have logo, 4 key links, and 'Enquire Now' button. Ambient sound toggle in the bottom right corner.",
+    "forms": "Minimalist inputs with border-bottom only (no full boxes). Floating labels, elegant focus states (border color changes to Gold)."
+  },
+  "sections_blueprint": [
+    {
+      "id": "hero",
+      "type": "Cinematic Video Hero",
+      "content": "Full screen immersive video. Headline: 'Where Luxury Breathes with Nature'. CTAs: 'Explore Vedanta', 'Book a Private Experience'. Particle snowfall overlay.",
+      "layout": "Centered text over darkened video background (bg-black/40 overlay)."
+    },
+    {
+      "id": "philosophy",
+      "type": "Editorial Text & Image",
+      "content": "The Aman-style philosophy of coexistence. 'A Home Away From Home'.",
+      "layout": "Asymmetric layout. Large text on left, tall overlapping image on right."
+    },
+    {
+      "id": "why_kufri",
+      "type": "Interactive Storytelling",
+      "content": "Seasonal beauty of Kufri. Summer, Winter, Spring, Monsoon tabs changing background images.",
+      "layout": "Full width image background with elegant glassmorphic tab selector."
+    },
+    {
+      "id": "experience_nature",
+      "type": "Immersive Parallax",
+      "content": "Massive Himalayan photography, fog, sunrise. Focus on wellness and nature.",
+      "layout": "Full screen parallax image with minimal center quote."
+    },
+    {
+      "id": "luxury_villas",
+      "type": "Data & Gallery",
+      "content": "8 Villas Only. 5500 sq.ft, 1800 sq.ft personal lawn, 3-storey earthquake-resistant RCC.",
+      "layout": "Bento grid. One large hero image of villa, smaller cards for specs. Floor plan download link."
+    },
+    {
+      "id": "wellness_living",
+      "type": "Feature Cards",
+      "content": "Nature jogging track, yoga site, meditation point.",
+      "layout": "Side-scrollable or staggered grid of tall images with bottom text."
+    },
+    {
+      "id": "life_at_vedanta",
+      "type": "Timeline",
+      "content": "An ideal day timeline from sunrise coffee in the glass conservatory to evening by the private bar.",
+      "layout": "Vertical line with alternating content blocks and images."
+    },
+    {
+      "id": "premium_amenities",
+      "type": "Glassmorphic Cards",
+      "content": "Outdoor Jacuzzi, Gaming & Library lounge, Otis elevator, Golf cart, 3-tier security, Doctor on call.",
+      "layout": "3-column grid of beautiful image-backed cards (no flat icons)."
+    },
+    {
+      "id": "vaishno_group_story",
+      "type": "Text & Image",
+      "content": "The legacy of Vaishno Group.",
+      "layout": "Editorial split screen."
+    },
+    {
+      "id": "founder_vision",
+      "type": "Video Modal",
+      "content": "Architects Ms. Santha Gour & Mr. Saawant Kaul (Infinitti Design Studio).",
+      "layout": "Large cinematic thumbnail with elegant play button."
+    },
+    {
+      "id": "sustainability",
+      "type": "Grid",
+      "content": "Italian Stonex, engineered wood, teak wood, Kohler, Mitsubishi VRF, Fenesta, smart home.",
+      "layout": "Minimal text list with accompanying macro-photography of materials."
+    },
+    {
+      "id": "gallery",
+      "type": "Masonry",
+      "content": "High-end photography with category filters (Exterior, Interior, Nature, Wellness).",
+      "layout": "Asymmetric masonry grid with hover-to-reveal captions."
+    },
+    {
+      "id": "investment",
+      "type": "Data Display",
+      "content": "Exclusivity and property appreciation. RERA No. HPRERASHI2022013/P.",
+      "layout": "Dark minimalist section with Champagne Gold data points."
+    },
+    {
+      "id": "testimonials",
+      "type": "Minimalist Carousel",
+      "content": "Quotes from exclusive clientele.",
+      "layout": "Large serif quotes, no boxes, just elegant text fading in and out."
+    },
+    {
+      "id": "contact",
+      "type": "Form & Contact",
+      "content": "Luxury enquiry form, 'Book a Private Tour', WhatsApp CTA.",
+      "layout": "Two columns: elegant form on left, direct contact info and Map/Image on right."
+    }
+  ],
+  "media": {
+    "video": {
+      "hero_background": "https://videos.pexels.com/video-files/4204859/4204859-hd_1920_1080_30fps.mp4"
+    },
+    "images": {
+      "hero_mountains": "https://images.unsplash.com/photo-1665849863678-fc03a642a9aa",
+      "pine_forest": "https://images.unsplash.com/photo-1543510518-9d8afe002596",
+      "misty_forest_parallax": "https://images.unsplash.com/photo-1583606638441-b9c746100447",
+      "villa_exterior_1": "https://images.unsplash.com/photo-1716077521105-f0d699ab2047",
+      "villa_exterior_2": "https://images.unsplash.com/photo-1671622524953-2aa2cce477f2",
+      "living_room_1": "https://images.pexels.com/photos/8583809/pexels-photo-8583809.jpeg",
+      "living_room_2": "https://images.pexels.com/photos/32421760/pexels-photo-32421760.png",
+      "outdoor_jacuzzi_1": "https://images.pexels.com/photos/19737886/pexels-photo-19737886.jpeg",
+      "outdoor_jacuzzi_2": "https://images.pexels.com/photos/18903511/pexels-photo-18903511.jpeg",
+      "wellness_yoga": "https://images.unsplash.com/photo-1524863479829-916d8e77f114",
+      "spa_massage": "https://images.pexels.com/photos/18120171/pexels-photo-18120171.jpeg"
+    }
+  },
+  "libraries": [
+    "lenis (for smooth scrolling)",
+    "framer-motion (for slow fades and parallax)",
+    "lucide-react (for minimal elegant icons)",
+    "react-use-audio (for ambient forest sound toggle)"
+  ],
+  "accessibility": {
+    "contrast": "Ensure Champagne Gold text on Forest Green background meets APCA contrast standards. Use darker overlays on images to ensure text readability.",
+    "testing": "All interactive elements MUST include data-testid attributes for automated testing."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends.",
+    "Create depth through layered design elements with z-index hierarchy and glass-morphism effects.",
+    "NEVER use generic placeholder images or text.",
+    "Do NOT use HTML-based components for advanced user interactions; use Shadcn components customized with Tailwind.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "DO NOT center align the app container (.App { text-align: center; } is FORBIDDEN).",
+    "Apply specific transitions (e.g., transition-colors duration-300), do NOT use 'transition-all' as it breaks transforms."
+  ]
+}
