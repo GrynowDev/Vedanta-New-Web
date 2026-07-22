@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { format, addDays } from "date-fns";
 import { CalendarIcon, Loader2, MessageCircle } from "lucide-react";

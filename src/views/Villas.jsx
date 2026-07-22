@@ -1,12 +1,14 @@
+"use client";
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Check } from "lucide-react";
 import { Reveal, Overline } from "../components/Reveal";
 import SwipeCarousel from "../components/SwipeCarousel";
 import { MEDIA, VILLA_SPECS, VILLA_FEATURES, RESIDENCES, FLOOR_PLANS } from "../data";
 
 export default function Villas() {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <div className="bg-forest-deep" data-testid="villas-page">
       {/* Hero */}
@@ -127,7 +129,7 @@ export default function Villas() {
             <Reveal delay={0.3}>
               <button
                 data-testid="villas-enquire-btn"
-                onClick={() => navigate("/contact")}
+                onClick={() => router.push("/contact")}
                 className="rounded-full bg-gold px-9 py-3.5 font-body text-xs uppercase tracking-[0.25em] text-forest transition-colors duration-300 hover:bg-ivory"
               >
                 Request Availability

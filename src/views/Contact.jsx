@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Reveal, Overline } from "../components/Reveal";

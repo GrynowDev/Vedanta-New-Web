@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
@@ -7,14 +9,14 @@ const LINKS = [
   { label: "Philosophy", to: "/#philosophy" },
   { label: "Residences", to: "/villas" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Amenities", to: "/#amenities" },
+  { label: "Journal", to: "/blogs" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -25,8 +27,8 @@ export default function Navbar() {
   const handleNav = (to) => {
     setOpen(false);
     if (to === "/") {
-      if (location.pathname !== "/") {
-        navigate("/");
+      if (pathname !== "/") {
+        router.push("/");
       } else {
         window.scrollTo({ top: 0 });
       }
@@ -34,14 +36,14 @@ export default function Navbar() {
     }
     if (to.startsWith("/#")) {
       const id = to.slice(2);
-      if (location.pathname !== "/") {
-        navigate("/");
+      if (pathname !== "/") {
+        router.push("/");
         setTimeout(() => document.getElementById(id)?.scrollIntoView(), 300);
       } else {
         document.getElementById(id)?.scrollIntoView();
       }
     } else {
-      navigate(to);
+      router.push(to);
       window.scrollTo({ top: 0 });
     }
   };

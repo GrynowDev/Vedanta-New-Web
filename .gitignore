@@ -3,6 +3,8 @@ node_modules/
 
 # production
 build/
+.next/
+out/
 
 # misc
 .DS_Store

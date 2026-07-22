@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { BedDouble, Bath, ArrowUpRight } from "lucide-react";
 import { Reveal, Overline, SectionTitle, SectionLead } from "./Reveal";
