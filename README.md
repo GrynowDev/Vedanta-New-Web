@@ -17,7 +17,6 @@ Copy `.env.example` to `.env.local`:
 
 ```
 NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com
-NEXT_PUBLIC_BACKEND_URL=https://your-backend-url
 ```
 
 ## Build
@@ -31,5 +30,5 @@ yarn start
 
 1. Import the repo in Vercel
 2. Framework: Next.js (auto-detected)
-3. Set `NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com` and `NEXT_PUBLIC_BACKEND_URL`
+3. Set `NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com`
 4. Deploy
