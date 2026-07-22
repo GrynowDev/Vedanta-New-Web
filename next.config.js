@@ -12,19 +12,4 @@ module.exports = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "vedantabyvaishnogroup.com",
-          },
-        ],
-        destination: "https://www.vedantabyvaishnogroup.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
