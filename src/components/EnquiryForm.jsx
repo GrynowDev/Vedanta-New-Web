@@ -9,7 +9,6 @@ import {
 } from "./ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Calendar } from "./ui/calendar";
-import { submitEnquiry } from "../lib/api";
 import { CONTACT } from "../data";
 
 const INTERESTS = [
@@ -43,6 +42,24 @@ function DateField({ value, onChange, placeholder, disabled, testid }) {
   );
 }
 
+function buildEnquiryMessage({ form, interest, guests, checkIn, checkOut }) {
+  const lines = [
+    "Hello Vedanta, I would like to reserve a stay.",
+    "",
+    `Name: ${form.name}`,
+    `Email: ${form.email}`,
+    `Phone: ${form.phone}`,
+    `Interest: ${interest}`,
+  ];
+  if (guests) lines.push(`Guests: ${guests}`);
+  if (checkIn) lines.push(`Check-in: ${format(checkIn, "yyyy-MM-dd")}`);
+  if (checkOut) lines.push(`Check-out: ${format(checkOut, "yyyy-MM-dd")}`);
+  if (form.message.trim()) {
+    lines.push("", `Message: ${form.message.trim()}`);
+  }
+  return lines.join("\n");
+}
+
 export default function EnquiryForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [interest, setInterest] = useState("Reserve a Stay");
@@ -54,6 +71,8 @@ export default function EnquiryForm() {
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const today = new Date(new Date().setHours(0, 0, 0, 0));
 
+  const waBase = `https://wa.me/${CONTACT.whatsapp}`;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.phone) {
@@ -62,14 +81,9 @@ export default function EnquiryForm() {
     }
     setLoading(true);
     try {
-      await submitEnquiry({
-        ...form,
-        interest,
-        guests,
-        check_in: checkIn ? format(checkIn, "yyyy-MM-dd") : null,
-        check_out: checkOut ? format(checkOut, "yyyy-MM-dd") : null,
-      });
-      toast.success("Thank you. We'll hold the quiet for you and reply within the day.");
+      const text = buildEnquiryMessage({ form, interest, guests, checkIn, checkOut });
+      window.open(`${waBase}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+      toast.success("Opening WhatsApp so you can send your enquiry.");
       setForm({ name: "", email: "", phone: "", message: "" });
       setInterest("Reserve a Stay");
       setGuests(null);
@@ -82,7 +96,7 @@ export default function EnquiryForm() {
     }
   };
 
-  const waLink = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
+  const waLink = `${waBase}?text=${encodeURIComponent(
     "Hello Vedanta, I would like to reserve a stay at the residences."
   )}`;
 
