@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { ArrowRight, ArrowUpRight, Plus, Leaf, Wind, Moon, Users, Home as HomeIcon, TreePine, Layers, Zap, Droplets, Footprints } from "lucide-react";
 import { Reveal, Overline, SectionTitle, SectionLead } from "../components/Reveal";
 import EnquiryForm from "../components/EnquiryForm";
@@ -44,7 +46,7 @@ const HERO_AVATARS = [
 /* ----------------------------- HERO ----------------------------- */
 function Hero() {
   const ref = useRef(null);
-  const navigate = useNavigate();
+  const router = useRouter();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -126,14 +128,14 @@ function Hero() {
             >
               <button
                 data-testid="hero-book-btn"
-                onClick={() => navigate("/contact")}
+                onClick={() => router.push("/contact")}
                 className="rounded-full bg-ivory px-7 py-3.5 font-body text-sm font-semibold text-forest transition-colors duration-200 hover:bg-white"
               >
                 Contact us
               </button>
               <button
                 data-testid="hero-explore-btn"
-                onClick={() => navigate("/villas")}
+                onClick={() => router.push("/villas")}
                 className="group inline-flex items-center gap-2 font-body text-sm font-medium text-ivory transition-colors duration-200 hover:text-ivory/80"
               >
                 View Residences
@@ -251,7 +253,7 @@ function Philosophy() {
 
 /* --------------------------- WHY KUFRI --------------------------- */
 function WhyKufri() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <section
@@ -265,7 +267,7 @@ function WhyKufri() {
         <Reveal delay={0.2} className="mt-14 lg:mt-16">
           <KufriPortfolio
             items={SEASONS}
-            onVisit={() => navigate("/contact")}
+            onVisit={() => router.push("/contact")}
           />
         </Reveal>
       </div>
@@ -323,7 +325,7 @@ function ExperienceNature() {
 
 /* --------------------------- VILLAS ----------------------------- */
 function Villas() {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <section
       id="villas"
@@ -380,7 +382,7 @@ function Villas() {
             <Reveal delay={0.3}>
               <button
                 data-testid="villas-explore-btn"
-                onClick={() => navigate("/villas")}
+                onClick={() => router.push("/villas")}
                 className="group mt-12 inline-flex items-center gap-3 font-body text-xs uppercase tracking-[0.25em] text-gold"
               >
                 See the Residences
@@ -570,7 +572,7 @@ function ContactSection() {
 
 /* --------------------- RESIDENCE SHOWCASE (COLLECTION) --------------------- */
 function ResidenceShowcase() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const featured = RESIDENCES.slice(0, 6);
 
   return (
@@ -587,13 +589,13 @@ function ResidenceShowcase() {
             <Reveal key={residence.slug} delay={0.08 * i}>
               <CollectionCard
                 item={residence}
-                onClick={() => navigate("/villas")}
+                onClick={() => router.push("/villas")}
               />
             </Reveal>
           ))}
         </div>
 
-        <CollectionSeeAll onClick={() => navigate("/villas")} />
+        <CollectionSeeAll onClick={() => router.push("/villas")} />
       </div>
     </section>
   );

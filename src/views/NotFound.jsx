@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Reveal, Overline } from "../components/Reveal";
 import { MEDIA } from "../data";
 
 export default function NotFound() {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden" data-testid="notfound-page">
       <img src={MEDIA.mistyForest} alt="Kufri forest" className="absolute inset-0 h-full w-full object-cover" />
@@ -24,7 +26,7 @@ export default function NotFound() {
         <Reveal delay={0.3}>
           <button
             data-testid="notfound-home-btn"
-            onClick={() => navigate("/")}
+            onClick={() => router.push("/")}
             className="mt-12 rounded-full bg-gold px-9 py-3.5 font-body text-xs uppercase tracking-[0.25em] text-forest transition-colors duration-300 hover:bg-ivory"
           >
             Return to Vedanta

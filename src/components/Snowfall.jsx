@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 
 // Lightweight, subtle snowfall on a fixed canvas.

@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Reveal, Overline, SectionTitle } from "./Reveal";
 
 function MarqueeCard({ item, onClick }) {
@@ -22,7 +24,7 @@ function MarqueeCard({ item, onClick }) {
 }
 
 export default function PropertyMarquee({ items }) {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const track = useMemo(() => {
     const base = [...items, ...items, ...items];
@@ -56,7 +58,7 @@ export default function PropertyMarquee({ items }) {
               <MarqueeCard
                 key={`${item.img}-${i}`}
                 item={item}
-                onClick={() => navigate("/gallery")}
+                onClick={() => router.push("/gallery")}
               />
             ))}
           </div>

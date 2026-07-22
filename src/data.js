@@ -463,3 +463,107 @@ export const CONTACT = {
   email: "concierge@vedantakufri.com",
   address: "Vedanta, Kufri, Shimla, Himachal Pradesh, India",
 };
+
+export const BLOGS = [
+  {
+    slug: "why-kufri-is-the-quietest-escape-from-shimla",
+    title: "Why Kufri Is the Quietest Escape from Shimla",
+    excerpt:
+      "Just beyond the crowds of Shimla, Kufri keeps the Himalayas intimate — cedar air, open views, and evenings that refuse to hurry.",
+    category: "Destination",
+    date: "2026-03-12",
+    readTime: "5 min read",
+    cover: BROCHURE.forestMist,
+    content: [
+      "Shimla has charm, history, and a famous ridge walk. It also has traffic, queues, and weekends that feel louder than the mountains should. Kufri sits only a short drive away, yet it carries a different tempo — fewer shopfronts, more forest, and mornings that begin with mist instead of horns.",
+      "At 8,500 feet, the air cools quickly after sunset. Pine and cedar scent the trails. From a private lawn or deck, the valley opens without the pressure to “do” the destination. Guests often say the first gift of Kufri is simply permission to stop planning.",
+      "Vedanta was designed for that kind of stay: eight residences, generous indoor rooms, and outdoor space that belongs to you. You are close enough to Shimla for a day visit, and far enough that evenings return to stillness.",
+      "If you are choosing between a busy hill station and a quieter Himalayan pocket, Kufri is the answer for travellers who want elevation without the spectacle.",
+    ],
+  },
+  {
+    slug: "a-slow-winter-weekend-at-vedanta",
+    title: "A Slow Winter Weekend at Vedanta",
+    excerpt:
+      "Snow on the pines, firelight indoors, and a rhythm built around long breakfasts and unhurried walks.",
+    category: "Stay",
+    date: "2026-02-18",
+    readTime: "6 min read",
+    cover: MEDIA.snowValley,
+    content: [
+      "Winter in Kufri does not ask for an itinerary. It asks for warmth, soft light, and the patience to watch snow settle on the ridge. At Vedanta, mornings often begin later than usual — coffee by a window, a slow meal, coats left by the door until the sun softens the cold.",
+      "Afternoons are for short forest walks and long returns to the villa. The great room holds conversation; the fireplace holds the evening. When snowfall arrives, the estate feels even more private — eight residences wrapped in white silence.",
+      "Pack layers, leave the packed schedule behind, and let the mountain decide the pace. A winter weekend here is less about sightseeing and more about reclaiming quiet hours with the people you came with.",
+    ],
+  },
+  {
+    slug: "designing-for-silence-inside-a-himalayan-villa",
+    title: "Designing for Silence Inside a Himalayan Villa",
+    excerpt:
+      "Stone, cedar, and open volumes — how Vedanta’s interiors protect calm without feeling sparse.",
+    category: "Design",
+    date: "2026-01-28",
+    readTime: "4 min read",
+    cover: BROCHURE.greatRoom,
+    content: [
+      "Silence in a mountain home is not the absence of life. It is the absence of interruption. Vedanta’s interiors favour materials that soften sound and hold warmth — timber, stone, textured fabrics — while rooms stay generous enough for families to gather without crowding.",
+      "Light matters as much as layout. Tall openings frame the forest; evenings lean on firelight and low lamps. The goal is not a showroom. It is a room you can live in for days without feeling you should leave.",
+      "Private lawns and decks extend that calm outdoors. Design here is quiet on purpose: fewer statements, more lasting comfort at altitude.",
+    ],
+  },
+  {
+    slug: "best-time-to-visit-kufri-for-a-private-stay",
+    title: "Best Time to Visit Kufri for a Private Stay",
+    excerpt:
+      "Summer coolness, spring colour, monsoon mist, winter snow — each season offers a different kind of Himalayan stillness.",
+    category: "Travel",
+    date: "2025-12-05",
+    readTime: "5 min read",
+    cover: BROCHURE.villaDay,
+    content: [
+      "There is no single “best” month for Kufri — only the season that matches the stay you want. Summer brings cool days around 20°C and long evenings on the deck. Spring paints the hills with rhododendron. Monsoon wraps the estate in living green and soft fog. Winter brings snow and fireside hours.",
+      "For first-time guests seeking outdoor walks and golden light, late spring through early autumn is ideal. For romance and fireplaces, winter is unmatched. Families often prefer summer, when children can use lawns and trails without heavy layers.",
+      "Whenever you come, book for privacy first. With only eight residences, Vedanta stays intimate year-round — the mountain changes; the quiet does not.",
+    ],
+  },
+  {
+    slug: "what-a-private-himalayan-retreat-should-feel-like",
+    title: "What a Private Himalayan Retreat Should Feel Like",
+    excerpt:
+      "Not a hotel corridor. Not a crowded viewpoint. A home in the mountains that gives you time, space, and clean air.",
+    category: "Philosophy",
+    date: "2025-11-14",
+    readTime: "4 min read",
+    cover: BROCHURE.villaTwilight,
+    content: [
+      "A private retreat should feel like arrival, not check-in. You put your bags down and the house already seems to understand why you came: clean air, room to breathe, and no pressure to perform a holiday.",
+      "At Vedanta, that means residences sized for real living — kitchens, lounges, bedrooms with quiet, and lawns that belong to your group alone. Concierge support is available without hovering. The forest is close enough to walk into before breakfast.",
+      "If a stay leaves you more rested than entertained, it has done its work. That is the standard we hold for every guest who crosses the threshold.",
+    ],
+  },
+  {
+    slug: "wellness-in-the-mountains-beyond-the-spa-menu",
+    title: "Wellness in the Mountains, Beyond the Spa Menu",
+    excerpt:
+      "True restoration at altitude is simpler: sleep, stillness, movement in fresh air, and meals without rush.",
+    category: "Wellness",
+    date: "2025-10-02",
+    readTime: "5 min read",
+    cover: MEDIA.yoga,
+    content: [
+      "Wellness marketing often promises treatments. The mountains offer something quieter: deeper sleep, cooler air, and days without notifications dictating the hour. At Vedanta, wellness begins with the setting — elevation, forest, and residences designed for rest.",
+      "Guests stretch on decks at sunrise, walk cedar paths, or simply sit with tea while mist lifts from the valley. Spa moments and soft rituals have their place, but they are accents. The foundation is unhurried time.",
+      "Come for restoration that does not need a schedule. Leave with a body that remembers what quiet feels like.",
+    ],
+  },
+];
+
+export const getBlogBySlug = (slug) => BLOGS.find((b) => b.slug === slug);
+
+export const formatBlogDate = (iso) =>
+  new Date(iso).toLocaleDateString("en-IN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+

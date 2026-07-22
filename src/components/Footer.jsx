@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { CONTACT } from "../data";
 
 export default function Footer() {
@@ -20,9 +22,10 @@ export default function Footer() {
           <div>
             <h4 className="font-body text-[11px] uppercase tracking-[0.3em] text-gold">Explore</h4>
             <ul className="mt-5 space-y-3 font-body text-sm text-ivory/70">
-              <li><Link to="/villas" className="link-underline hover:text-ivory">The Villas</Link></li>
-              <li><Link to="/gallery" className="link-underline hover:text-ivory">Gallery</Link></li>
-              <li><Link to="/contact" className="link-underline hover:text-ivory">Contact</Link></li>
+              <li><Link href="/villas" className="link-underline hover:text-ivory">The Villas</Link></li>
+              <li><Link href="/gallery" className="link-underline hover:text-ivory">Gallery</Link></li>
+              <li><Link href="/blogs" className="link-underline hover:text-ivory">Blog</Link></li>
+              <li><Link href="/contact" className="link-underline hover:text-ivory">Contact</Link></li>
             </ul>
           </div>
 
