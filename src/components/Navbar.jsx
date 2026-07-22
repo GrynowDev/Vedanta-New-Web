@@ -9,7 +9,7 @@ const LINKS = [
   { label: "Philosophy", to: "/#philosophy" },
   { label: "Residences", to: "/villas" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Journal", to: "/blogs" },
+  { label: "Blog", to: "/blogs" },
 ];
 
 export default function Navbar() {

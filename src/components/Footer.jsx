@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 font-body text-sm text-ivory/70">
               <li><Link href="/villas" className="link-underline hover:text-ivory">The Villas</Link></li>
               <li><Link href="/gallery" className="link-underline hover:text-ivory">Gallery</Link></li>
-              <li><Link href="/blogs" className="link-underline hover:text-ivory">Journal</Link></li>
+              <li><Link href="/blogs" className="link-underline hover:text-ivory">Blog</Link></li>
               <li><Link href="/contact" className="link-underline hover:text-ivory">Contact</Link></li>
             </ul>
           </div>
