@@ -500,7 +500,7 @@ export const BLOGS = [
       "Are there villa options in Kufri besides hotels? Yes. Private villa properties like Vedanta offer full-property privacy as an alternative to hotel-room stays, with the entire residence — not just a room — reserved for your group. This is a distinct category from the boutique hotels and resorts that make up most of Kufri's listed inventory, and it's worth filtering for specifically if privacy is the priority rather than amenities or room count.",
       "How do private villas in Kufri compare on price to boutique hotels? Private villas typically run higher per night than a standard boutique hotel room, but the comparison isn't like-for-like — you're booking an entire property rather than a single room, so the per-person cost for a small group or family often lands closer than the headline nightly rate suggests. It's worth checking direct-booking rates rather than comparing only OTA-listed room prices, since villa operators frequently offer terms that aren't reflected on aggregator sites at all.",
     ],
-  },,
+  },
   {
     slug: "top-stays-in-kufri-india-8-private-luxury-villas",
     title: "Top Stays in Kufri, India: 8 Private Luxury Villas",
