@@ -465,7 +465,8 @@ export const CONTACT = {
 };
 
 export const BLOGS = [
-  slug: "top-stays-in-kufri-india-8-private-luxury-villas",
+  {
+    slug: "top-stays-in-kufri-india-8-private-luxury-villas",
     title: "Top Stays in Kufri, India: 8 Private Luxury Villas",
     excerpt:
       "Discover the top stays in Kufri, India — Vedanta's 8 private Himalayan villa residences at 8,500 ft. See why villa living beats hotels for privacy and views.",
