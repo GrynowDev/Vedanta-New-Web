@@ -1,8 +1,17 @@
 import "./globals.css";
-import SiteShell from "@/components/SiteShell";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Snowfall from "@/components/Snowfall";
+import AmbientSound from "@/components/AmbientSound";
+import ScrollToTop from "@/components/ScrollToTop";
+import AppToaster from "@/components/AppToaster";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
+/** Pre-render every page to static HTML on the server (best for SEO). */
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -42,12 +51,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/*
-          IMPORTANT: Use a raw <script> in <head> (not next/script).
-          next/script (afterInteractive / beforeInteractive) moves GTM into
-          <body> as a Next loader — Google Search Console then fails with
-          "snippet is in the wrong location".
-        */}
         {GTM_ID ? (
           <script
             dangerouslySetInnerHTML={{
@@ -69,10 +72,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         ) : null}
 
-        <SiteShell>{children}</SiteShell>
+        <div className="App grain min-h-screen">
+          <ScrollToTop />
+          <Navbar />
+          <Snowfall count={55} />
+          <AmbientSound />
+          <main>{children}</main>
+          <Footer />
+          <AppToaster />
+        </div>
       </body>
     </html>
   );
 }
-
-

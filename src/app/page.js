@@ -1,5 +1,7 @@
 import HomePage from "@/views/Home";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Vedanta — A Private Himalayan Sanctuary in Kufri",
   description:
