@@ -506,7 +506,7 @@ export const BLOGS = [
       "What's the best time to visit Kufri for a private villa stay? Late April through June offers pleasant daytime temperatures and clear skies before the July-September monsoon brings cloud cover and rain. October and November bring the clearest long-range mountain visibility, while late December through February is best for guests wanting snowfall. A full seasonal breakdown is covered in best time to visit Kufri for a private stay.",
       "How is a villa residence stay different from a norm...",
     ],
-  },,
+  },
   {
     slug: "why-kufri-is-the-quietest-escape-from-shimla",
     title: "Why Kufri Is the Quietest Escape from Shimla",
