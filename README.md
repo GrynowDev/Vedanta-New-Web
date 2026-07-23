@@ -17,6 +17,7 @@ Copy `.env.example` to `.env.local`:
 
 ```
 NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com
+NEXT_PUBLIC_GTM_ID=GTM-TD566STR
 ```
 
 ## Build
@@ -30,5 +31,7 @@ yarn start
 
 1. Import the repo in Vercel
 2. Framework: Next.js (auto-detected)
-3. Set `NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com`
+3. Set:
+   - `NEXT_PUBLIC_SITE_URL=https://www.vedantabyvaishnogroup.com`
+   - `NEXT_PUBLIC_GTM_ID=GTM-TD566STR`
 4. Deploy
