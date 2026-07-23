@@ -1,4 +1,3 @@
-import Script from "next/script";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 
@@ -43,11 +42,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
-        {GTM_ID && (
-          <Script
-            id="google-tag-manager"
-            strategy="afterInteractive"
+        {/*
+          IMPORTANT: Use a raw <script> in <head> (not next/script).
+          next/script (afterInteractive / beforeInteractive) moves GTM into
+          <body> as a Next loader — Google Search Console then fails with
+          "snippet is in the wrong location".
+        */}
+        {GTM_ID ? (
+          <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -56,21 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`,
             }}
           />
-        )}
+        ) : null}
       </head>
       <body>
-        {/* Google Tag Manager (noscript) */}
-        {GTM_ID && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-              title="Google Tag Manager"
-            />
-          </noscript>
-        )}
+        {GTM_ID ? (
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
+          />
+        ) : null}
 
         <SiteShell>{children}</SiteShell>
       </body>
