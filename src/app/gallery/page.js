@@ -1,5 +1,7 @@
 import GalleryPage from "@/views/Gallery";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Gallery",
   description:

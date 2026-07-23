@@ -1,5 +1,7 @@
 import ContactPage from "@/views/Contact";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Contact & Enquire",
   description:

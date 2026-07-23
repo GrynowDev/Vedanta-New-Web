@@ -1,5 +1,7 @@
 import VillasPage from "@/views/Villas";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Residences & Villas",
   description:

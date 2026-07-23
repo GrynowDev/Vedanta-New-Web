@@ -1,5 +1,7 @@
 import BlogsPage from "@/views/Blogs";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Journal & Stories",
   description:
