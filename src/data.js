@@ -653,20 +653,35 @@ export const BLOGS = [
     ],
   },
   {
-    slug: "wellness-in-the-mountains-beyond-the-spa-menu",
-    title: "Wellness in the Mountains, Beyond the Spa Menu",
-    excerpt:
-      "True restoration at altitude is simpler: sleep, stillness, movement in fresh air, and meals without rush.",
-    category: "Wellness",
-    date: "2025-10-02",
-    readTime: "5 min read",
-    cover: MEDIA.yoga,
-    content: [
-      "Wellness marketing often promises treatments. The mountains offer something quieter: deeper sleep, cooler air, and days without notifications dictating the hour. At Vedanta, wellness begins with the setting — elevation, forest, and residences designed for rest.",
-      "Guests stretch on decks at sunrise, walk cedar paths, or simply sit with tea while mist lifts from the valley. Spa moments and soft rituals have their place, but they are accents. The foundation is unhurried time.",
-      "Come for restoration that does not need a schedule. Leave with a body that remembers what quiet feels like.",
-    ],
-  },
+      slug: "wellness-in-the-mountains-beyond-the-spa-menu",
+      title: "Wellness Retreat in Kufri: A Himalayan Wellness Villa Stay",
+      excerpt:
+        "Skip the generic spa menu. Discover Vedanta's slow-living wellness retreat in Kufri — a Himalayan villa built around sleep, stillness, and unhurried mountain days.",
+      category: "blog",
+      date: "2026-07-24",
+      readTime: "7 min read",
+      cover:
+        "https://thumbnail-agent-bucket.s3.ap-south-1.amazonaws.com/thumbnail-agent/3e1dee2e-659c-42b3-98e1-2c184542b736.png",
+      content: [
+        "Most hotels sell wellness as a menu item — a 60-minute massage slot, a yoga mat unrolled in the corner of a conference room, a line in the brochure between \"pool\" and \"gym.\" A genuine wellness retreat in Kufri works differently. It isn't a treatment you book between activities; it's the rhythm of the entire day, built around sleep, stillness, and mountain air that doesn't ask anything of you. That's the difference between a spa add-on and an actual restorative stay — and it's the difference Vedanta is built around.",
+        "What Generic Spa-Hotel Packages Get Wrong. Walk into almost any hill-station property advertising \"wellness\" and you'll find the same formula: a spa menu with named treatments, a therapist on a schedule, and a single yoga session slotted in before breakfast. Book the 60-minute deep-tissue, tick the box, move on to sightseeing. It's wellness as a transaction — something that happens to you for an hour, in a room designed for it, and then stops.",
+        "The problem is that an hour of massage inside a hotel that's otherwise loud, over-lit, and running on hospitality-industry clockwork doesn't undo the rest of the day. Real restoration isn't a treatment slot; it's the absence of friction across the whole stay — no corridors, no rush to check-out times, no forced itinerary. A spa package treats wellness as an amenity. A slow-living stay treats it as the default state of every hour you're there.",
+        "What a Himalayan Wellness Villa Actually Offers. A Himalayan wellness villa isn't defined by what's on a treatment list — it's defined by the setting itself doing the work. At Vedanta, that starts with elevation and forest: cooler air, cedar-lined paths, and a quiet that has nothing to do with soundproofing and everything to do with there being genuinely less noise around you. Wellness here isn't an accent on top of a stay; it's the residence itself — private, still, and built for unhurried days rather than scheduled ones.",
+        "Guests stretch on private decks at sunrise, walk the cedar paths outside, or simply sit with tea while the mist lifts off the valley. Spa moments and soft rituals still have a place, but they're accents on a foundation that's already doing the heavier lifting: a private residence, forest surroundings, and time that isn't dictated by anyone's clock but your own. You can explore Vedanta's private villa residences to see how each one is set up for exactly this.",
+        "Sleep and Stillness at Altitude. Sleep is where the difference between a hotel room and a mountain villa shows up fastest. There's no shared corridor outside your door, no adjoining-room noise, no lobby hum drifting up through the floor — just a private residence at altitude, where the air itself is cooler and thinner in a way that tends to deepen rest rather than disturb it. At Vedanta, the sleeping quarters are set apart from any shared or public space, so the quiet that settles in after dark isn't something you have to request. It's simply the condition of the place.",
+        "Movement in Fresh Mountain Air. There's no gym schedule here, and that's the point. Movement happens the way it should in the mountains — unstructured, outdoors, and led by whatever the morning feels like. Guests stretch at sunrise on their own deck, take cedar paths through the forest at whatever pace suits them, or walk simply to be outside in air that's noticeably cleaner than anything at lower elevation. It's a looser, more instinctive version of \"fitness\" than a single yoga class squeezed into a hotel itinerary — closer to how movement actually restores a body than a program ever is.",
+        "Meals Without Rush. Meals at Vedanta aren't built around restaurant hours or a fixed seating time. Without a shared dining room dictating when the kitchen opens and closes, food happens on the stay's own rhythm — tea while the mist lifts, a late breakfast, dinner whenever the evening actually calls for it. That absence of a schedule is a small thing on paper, but it's one of the clearest signals that this is a stay built around your day rather than a property's operating hours.",
+        "A Typical Mountain Wellness Stay at Vedanta. A two- or three-day mountain wellness stay here doesn't run on a printed itinerary, but it does have a shape. Mornings tend to start quiet — tea on the deck, the valley still in mist, no rush to be anywhere. Midday opens up into whatever movement the day calls for: a walk along the cedar paths, time spent simply sitting outside, or nothing at all beyond watching the light change over the forest. Evenings slow further still, often settling around a fireplace as the temperature drops and the valley goes properly dark.",
+        "None of it is scheduled, and that's deliberate. The stay is built to be shaped by whoever's living it, not by a resort calendar. If you want a concrete sense of how this plays out across a season, a slow winter weekend at Vedanta walks through exactly that kind of unhurried few days.",
+        "Why Kufri Suits Slow, Restorative Travel. Not every hill station lends itself to this kind of stay. Kufri sits at a higher elevation than nearby Shimla, and it carries a different character altogether — forested, comparatively uncrowded, and far enough from the main tourist strip that the noise of a busier hill station simply doesn't reach it. That gap matters more than it sounds: a wellness stay depends on the surrounding quiet holding up outside the villa's walls too, not just inside them.",
+        "It's part of why Kufri works as a setting for this kind of travel in a way that more crowded alternatives don't. For a deeper look at what sets the town apart, why Kufri is the quietest escape from Shimla covers the comparison in more detail.",
+        "Designing the Villa for Rest, Not Just Looks. The design choices at Vedanta aren't primarily aesthetic — they're functional, aimed squarely at supporting rest rather than just photographing well. Private residences instead of shared hotel wings mean there's no adjoining-room noise to manage. The separation between common areas and private sleeping quarters is deliberate, so the parts of the villa built for gathering don't bleed into the parts built for sleep. Even small choices — thick walls, careful window placement, the layout of decks relative to the forest line — add up to a residence where silence isn't incidental but engineered.",
+        "This is a deeper subject than a single section can cover, and it's worth reading in full: how the villa is designed for silence goes into the specific architectural decisions behind it.",
+        "Planning Your Wellness Retreat in Kufri. The best window for a wellness retreat in Kufri depends on what kind of quiet you're after — crisp, fireplace-and-mist stillness in winter, or the milder, forest-fresh air of the shoulder seasons. Either works, and the best time to visit Kufri for a private stay breaks down the seasonal differences if you're weighing options.",
+        "This kind of stay tends to suit a specific traveler more than others: couples wanting real time together without a packed itinerary, solo travelers after an actual reset rather than a sightseeing checklist, or small groups who want a private residence over a shared hotel floor. If that sounds like what you're after — and you want a clearer sense of what the experience should feel like before booking — what a private Himalayan retreat should feel like is worth reading first.",
+        "When you're ready, you can enquire about a wellness stay at Vedanta directly — no spa menu required, just a residence built for the kind of rest that doesn't come with a schedule attached.",
+      ],
+    },
 ];
 
 export const getBlogBySlug = (slug) => BLOGS.find((b) => b.slug === slug);
