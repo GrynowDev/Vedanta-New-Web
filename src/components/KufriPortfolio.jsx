@@ -70,7 +70,12 @@ export default function KufriPortfolio({ items, onVisit }) {
     emblaApi?.scrollTo(0, true);
   }, [filter, emblaApi]);
 
-  const tabs = [{ id: "all", label: "All Seasons" }, ...items.map((s) => ({ id: s.id, label: s.label }))];
+  const tabs = [
+    { id: "all", label: "All Seasons" },
+    ...Array.from(
+      new Map(items.map((item) => [item.id, { id: item.id, label: item.label }])).values(),
+    ),
+  ];
 
   return (
     <div data-testid="kufri-portfolio">
@@ -100,7 +105,7 @@ export default function KufriPortfolio({ items, onVisit }) {
           <div className="flex">
             {filteredItems.map((item) => (
               <div
-                key={item.id}
+                key={item.key ?? item.img}
                 className={`min-w-0 shrink-0 grow-0 px-3 ${
                   filteredItems.length === 1
                     ? "basis-full"

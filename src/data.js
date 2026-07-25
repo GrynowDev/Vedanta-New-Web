@@ -57,10 +57,11 @@ export const PHILOSOPHY = [
 ];
 
 export const SEASONS = [
-  { id: "summer", label: "Summer", img: BROCHURE.villaDay, text: "Cool 20°C days, apple orchards in bloom, and endless golden evenings on the deck.", cta: "Explore Summer >" },
-  { id: "winter", label: "Winter", img: MEDIA.snowValley, text: "Snowfall blankets the pines. Fireside afternoons and crystalline mountain silence.", cta: "Explore Winter >" },
-  { id: "spring", label: "Spring", img: MEDIA.springMeadow, text: "Rhododendrons ignite the hills. Meadows awaken in soft, deliberate colour.", cta: "Explore Spring >" },
-  { id: "monsoon", label: "Monsoon", img: BROCHURE.forestMist, text: "Mist drifts through the valley. The forest breathes deep, green and alive.", cta: "Explore Monsoon >" },
+  { key: "summer-adventure", id: "summer", label: "Summer", img: "/Homepage/Hip Hip Hurray Adventure Park.jpg", text: "Cool 20°C days, apple orchards in bloom, and endless golden evenings on the deck.", cta: "Explore Summer >" },
+  { key: "summer-helipad", id: "summer", label: "Summer", img: "/Homepage/Helipad kufri.webp", text: "Clear mountain days invite long afternoons of adventure beneath the Himalayan sky.", cta: "Explore Summer >" },
+  { key: "winter-shimla", id: "winter", label: "Winter", img: "/Homepage/Shimla City.webp", text: "Snowfall blankets the pines. Fireside afternoons and crystalline mountain silence.", cta: "Explore Winter >" },
+  { key: "spring-mahindra", id: "spring", label: "Spring", img: "/Homepage/MAHINDRA-kufri.jpeg", text: "Rhododendrons ignite the hills. Meadows awaken in soft, deliberate colour.", cta: "Explore Spring >" },
+  { key: "monsoon-ridge", id: "monsoon", label: "Monsoon", img: "/Homepage/The Ridge Mall Road.webp", text: "Mist drifts through the valley. The forest breathes deep, green and alive.", cta: "Explore Monsoon >" },
 ];
 
 export const NATURE = [
@@ -363,18 +364,132 @@ export const TRUSTED_BRANDS = [
 
 export const PROPERTY_MARQUEE = [
   {
-    img: "https://framerusercontent.com/images/9X2b2tpUg1z6MdbH5TnsJ7dcpY.png?width=640&height=359",
-    label: "Sunset Villa",
+    id: "villa-twilight",
+    img: BROCHURE.villaTwilight,
+    badge: "Residence",
+    title: "Sunset Villa",
+    subtitle: "Twilight facade at 8,500 ft",
+    caption: "Where pine-scented evenings begin.",
   },
   {
-    img: "https://framerusercontent.com/images/CXMW3PrDeP3YW4oOGmaiHmtfyw.png?width=640&height=850",
-    label: "Poolside Retreat",
+    id: "great-room",
+    img: BROCHURE.greatRoom,
+    badge: "Interiors",
+    title: "Great Room",
+    subtitle: "Double-height living with valley views",
+    caption: "Gather, linger, and unwind in quiet luxury.",
   },
   {
-    img: "https://framerusercontent.com/images/hC3X0Gbnr7Hfy4pbdsv7RUhKus.png?width=640&height=427",
-    label: "Garden Elevation",
+    id: "poolside",
+    img: BROCHURE.conservatory,
+    badge: "Wellness",
+    title: "Conservatory Lounge",
+    subtitle: "Light-filled retreat for slow mornings",
+    caption: "Glass, greenery, and Himalayan calm.",
+  },
+  {
+    id: "villa-day",
+    img: BROCHURE.villaDay,
+    badge: "Architecture",
+    title: "Garden Elevation",
+    subtitle: "Stone, timber & sky in dialogue",
+    caption: "Crafted to sit gently in the mountains.",
+  },
+  {
+    id: "master-suite",
+    img: BROCHURE.bedroomSuite,
+    badge: "Suites",
+    title: "Master Suite",
+    subtitle: "Private sanctuary with mountain light",
+    caption: "Rest deeply above the valley.",
+  },
+  {
+    id: "fireside",
+    img: BROCHURE.livingFireplace,
+    badge: "Living",
+    title: "Fireside Living",
+    subtitle: "Warm evenings by the hearth",
+    caption: "Conversations that finally unhurry.",
+  },
+  {
+    id: "kitchen",
+    img: BROCHURE.kitchen,
+    badge: "Culinary",
+    title: "Chef's Kitchen",
+    subtitle: "Gather around shared tables",
+    caption: "Flavours woven with mountain hospitality.",
   },
 ];
+
+/** Destinations “Find your perfect escape” — all nearby places from Vicinity */
+export const DESTINATION_FILTERS = [
+  { id: "all", label: "All" },
+  { id: "nearby", label: "Nearby" },
+  { id: "shimla", label: "Shimla" },
+  { id: "further", label: "Further Afield" },
+];
+
+const PLACE_IMAGES = [
+  "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1478131143081-80f7f84ca84a?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+  "/brochure/villa-day.jpg",
+  "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
+];
+
+/** Vicinity — “Uniting Urban Indulgences” distances table */
+export const VICINITY = [
+  { name: "Sterling Resorts", distance: "3 Km", time: "5 Mins", category: "nearby" },
+  { name: "Royal Tulip", distance: "5 Km", time: "8 Mins", category: "nearby" },
+  { name: "Hip Hip Hurray Adventure Park", distance: "5 Km", time: "8 Mins", category: "nearby" },
+  { name: "Kufri Fun World", distance: "5 Km", time: "8 Mins", category: "nearby" },
+  { name: "Raddison Hotel", distance: "6 Km", time: "10 Mins", category: "nearby" },
+  { name: "Oberoi Wild Flower Hall", distance: "7 Km", time: "12 Mins", category: "nearby" },
+  { name: "Taj Hotel", distance: "9 Km", time: "15 Mins", category: "nearby" },
+  { name: "Sun Rise/Set Point", distance: "6 Km", time: "9 Mins", category: "nearby" },
+  { name: "Kufri City", distance: "4 Km", time: "8 Mins", category: "nearby" },
+  { name: "Mahindras", distance: "4 Km", time: "7 Mins", category: "nearby" },
+  { name: "Helipad", distance: "15 Km", time: "20 Mins", category: "shimla" },
+  { name: "The Ridge Mall Road", distance: "15 Km", time: "30 Mins", category: "shimla" },
+  { name: "Shimla City", distance: "20 Km", time: "45 Mins", category: "shimla" },
+  { name: "Railways Station, Shimla", distance: "22 Km", time: "50 Mins", category: "shimla" },
+  { name: "Taradevi Temple, Shoghi", distance: "35 Km", time: "65 Mins", category: "further" },
+  { name: "Shimla Airport", distance: "37 Km", time: "70 Mins", category: "further" },
+  { name: "Chail City", distance: "40 Km", time: "70 Mins", category: "further" },
+  { name: "Narkanda", distance: "45 Km", time: "80 Mins", category: "further" },
+];
+
+/** Local images for specific Vicinity places (uploaded assets). */
+const VICINITY_IMAGES = {
+  "Hip Hip Hurray Adventure Park": "/Homepage/Hip Hip Hurray Adventure Park.jpg",
+  Mahindras: "/Homepage/MAHINDRA-kufri.jpeg",
+  Helipad: "/Homepage/Helipad kufri.webp",
+  "The Ridge Mall Road": "/Homepage/The Ridge Mall Road.webp",
+  "Shimla City": "/Homepage/Shimla City.webp",
+};
+
+/** All Vicinity places as escape cards */
+export const DESTINATIONS = VICINITY.map((place, i) => ({
+  id: place.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+  name: place.name,
+  distance: place.distance,
+  time: place.time,
+  category: place.category,
+  img: VICINITY_IMAGES[place.name] || PLACE_IMAGES[i % PLACE_IMAGES.length],
+}));
 
 export const GALLERY = [
   { img: BROCHURE.villaTwilight, cat: "Exterior" },
