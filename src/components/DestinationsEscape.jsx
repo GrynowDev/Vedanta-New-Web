@@ -6,6 +6,7 @@ import { Reveal } from "./Reveal";
 
 const TITLE = "#2F4A38";
 const ACCENT = "#E0B04B";
+const VICINITY_MAP = "/vicinity/route-map.png";
 
 const FILTER_ICONS = {
   all: Sparkles,
@@ -56,12 +57,28 @@ export default function DestinationsEscape({
   return (
     <section
       id="vicinity"
-      className="bg-[#FAFAF8] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+      className="relative overflow-hidden bg-[#FAFAF8] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
       data-testid="destinations-escape-section"
     >
-      <div className="mx-auto max-w-[1400px]">
+      {/* Soft map background — top right, horizontal, left text stays clear */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 z-0 h-[260px] w-[70%] max-w-[820px] overflow-hidden sm:h-[320px] lg:h-[380px]"
+        aria-hidden="true"
+        data-testid="vicinity-map"
+      >
+        <img
+          src={VICINITY_MAP}
+          alt=""
+          loading="eager"
+          className="absolute left-[58%] top-[48%] h-[720px] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 -rotate-90 object-contain opacity-55 sm:h-[860px] lg:h-[980px]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAFAF8] via-[#FAFAF8]/55 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FAFAF8] to-transparent" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1400px]">
         <Reveal>
-          <div>
+          <div className="relative max-w-xl lg:max-w-2xl">
             <h2
               className="font-serif-display text-4xl font-medium leading-none tracking-tight sm:text-5xl lg:text-6xl"
               style={{ color: TITLE }}
@@ -93,7 +110,7 @@ export default function DestinationsEscape({
                   role="tab"
                   aria-selected={selected}
                   onClick={() => setActive(filter.id)}
-                  className={`inline-flex shrink-0 items-center gap-2 rounded-full border bg-white px-4 py-2.5 font-body text-[13px] transition-colors ${
+                  className={`inline-flex shrink-0 items-center gap-2 rounded-full border bg-white/90 px-4 py-2.5 font-body text-[13px] backdrop-blur-sm transition-colors ${
                     selected
                       ? "border-[#2F4A38] text-[#2F4A38]"
                       : "border-[#D9D3C9] text-[#6B645C] hover:border-[#A89F92]"

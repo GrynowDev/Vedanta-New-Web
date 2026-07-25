@@ -1,34 +1,59 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Reveal, Overline, SectionTitle, SectionLead } from "./Reveal";
+import { ArrowRight } from "lucide-react";
+import { Reveal } from "./Reveal";
+
+const PANEL = {
+  all: {
+    title: "Some places become famous. Kufri became timeless.",
+    text: "Mist drifts through the valley. The forest breathes deep, green and alive.",
+    cta: "Explore Kufri",
+  },
+  summer: {
+    title: "Summer in Kufri",
+    text: "Cool 20°C days, apple orchards in bloom, and endless golden evenings on the deck.",
+    cta: "Explore Summer",
+  },
+  winter: {
+    title: "Winter in Kufri",
+    text: "Snowfall blankets the pines. Fireside afternoons and crystalline mountain silence.",
+    cta: "Explore Winter",
+  },
+  spring: {
+    title: "Spring in Kufri",
+    text: "Rhododendrons ignite the hills. Meadows awaken in soft, deliberate colour.",
+    cta: "Explore Spring",
+  },
+  monsoon: {
+    title: "Monsoon in Kufri",
+    text: "Mist drifts through the valley. The forest breathes deep, green and alive.",
+    cta: "Explore Monsoon",
+  },
+};
 
 function PortfolioCard({ item, onVisit }) {
   return (
-    <article className="group relative h-[420px] overflow-hidden sm:h-[480px] lg:h-[540px]">
-      <img
-        src={item.img}
-        alt={item.label}
-        loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/55 via-forest-deep/10 to-forest-deep/20" />
-      <div className="absolute inset-x-0 top-8 flex justify-center px-6">
-        <span className="font-body text-[10px] uppercase tracking-[0.35em] text-ivory/80">
-          Vedanta · Kufri
-        </span>
+    <article
+      className="group w-full cursor-pointer"
+      data-testid={`kufri-card-${item.key ?? item.id}`}
+      onClick={() => onVisit?.(item)}
+    >
+      <div className="aspect-[3/4] overflow-hidden rounded-[1.5rem]">
+        <img
+          src={item.img}
+          alt={item.label}
+          loading="lazy"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        />
       </div>
-      <div className="absolute inset-x-0 bottom-8 flex justify-center px-6">
-        <button
-          type="button"
-          onClick={() => onVisit?.(item)}
-          className="min-w-[220px] bg-[#E5C58A] px-8 py-3.5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-black transition-colors duration-300 hover:bg-ivory"
-        >
-          {item.cta}
-        </button>
-      </div>
+      <p className="mt-3 font-body text-[11px] font-medium uppercase tracking-[0.18em] text-[#8A8A8A] sm:text-xs sm:tracking-[0.14em]">
+        Vedanta · Kufri
+      </p>
+      <h3 className="mt-1 font-serif-display text-lg font-medium leading-snug text-[#1A1A1A] sm:text-xl">
+        {item.label}
+      </h3>
     </article>
   );
 }
@@ -36,133 +61,107 @@ function PortfolioCard({ item, onVisit }) {
 export default function KufriPortfolio({ items, onVisit }) {
   const [filter, setFilter] = useState("all");
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: false,
     align: "start",
+    dragFree: true,
     slidesToScroll: 1,
   });
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
 
   const filteredItems = useMemo(
     () => (filter === "all" ? items : items.filter((item) => item.id === filter)),
     [filter, items],
   );
 
-  const updateButtons = useCallback(() => {
-    if (!emblaApi) return;
-    setCanPrev(emblaApi.canScrollPrev());
-    setCanNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  const panel = PANEL[filter] ?? PANEL.all;
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    updateButtons();
-    emblaApi.on("select", updateButtons);
-    emblaApi.on("reInit", updateButtons);
-    return () => {
-      emblaApi.off("select", updateButtons);
-      emblaApi.off("reInit", updateButtons);
-    };
-  }, [emblaApi, updateButtons]);
+  const tabs = useMemo(
+    () => [
+      { id: "all", label: "All Seasons" },
+      ...Array.from(
+        new Map(
+          items.map((item) => [item.id, { id: item.id, label: item.label }]),
+        ).values(),
+      ),
+    ],
+    [items],
+  );
 
   useEffect(() => {
     emblaApi?.reInit();
     emblaApi?.scrollTo(0, true);
-  }, [filter, emblaApi]);
-
-  const tabs = [
-    { id: "all", label: "All Seasons" },
-    ...Array.from(
-      new Map(items.map((item) => [item.id, { id: item.id, label: item.label }])).values(),
-    ),
-  ];
+  }, [filter, emblaApi, filteredItems.length]);
 
   return (
     <div data-testid="kufri-portfolio">
-      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-        {tabs.map((tab) => {
-          const isActive = filter === tab.id;
-          return (
-            <button
-              key={tab.id}
-              type="button"
-              data-testid={`kufri-filter-${tab.id}`}
-              onClick={() => setFilter(tab.id)}
-              className={`rounded-full border px-5 py-2.5 font-body text-[10px] uppercase tracking-[0.24em] transition-colors duration-300 sm:px-6 sm:text-[11px] ${
-                isActive
-                  ? "border-ivory bg-ivory text-forest"
-                  : "border-ivory/50 bg-transparent text-ivory/90 hover:border-ivory"
-              }`}
-            >
-              {tab.label}
-            </button>
-          );
-        })}
-      </div>
+      <Reveal>
+        <p className="font-body text-[11px] uppercase tracking-[0.35em] text-[#9A7B4F] sm:text-xs">
+          Chapter Five — Why Kufri
+        </p>
+      </Reveal>
 
-      <div className="mt-14 lg:mt-16">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {filteredItems.map((item) => (
-              <div
-                key={item.key ?? item.img}
-                className={`min-w-0 shrink-0 grow-0 px-3 ${
-                  filteredItems.length === 1
-                    ? "basis-full"
-                    : "basis-full sm:basis-1/2"
-                }`}
-              >
-                <PortfolioCard item={item} onVisit={onVisit} />
-              </div>
-            ))}
+      <Reveal delay={0.06}>
+        <div className="mt-8 border-b border-[#E5E5E5]">
+          <div className="flex gap-6 overflow-x-auto pb-0 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-10 [&::-webkit-scrollbar]:hidden">
+            {tabs.map((tab) => {
+              const isActive = filter === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  data-testid={`kufri-filter-${tab.id}`}
+                  onClick={() => setFilter(tab.id)}
+                  className={`relative shrink-0 pb-4 font-body text-sm transition-colors duration-300 sm:text-base ${
+                    isActive
+                      ? "font-semibold text-[#1A1A1A]"
+                      : "font-normal text-[#8A8A8A] hover:text-[#1A1A1A]"
+                  }`}
+                >
+                  {tab.label}
+                  {isActive ? (
+                    <span className="absolute inset-x-0 -bottom-px h-[2px] bg-[#1A1A1A]" />
+                  ) : null}
+                </button>
+              );
+            })}
           </div>
         </div>
+      </Reveal>
 
-        <div className="mt-8 flex items-center justify-center gap-4">
-          <button
-            type="button"
-            aria-label="Previous"
-            data-testid="kufri-portfolio-prev"
-            onClick={() => emblaApi?.scrollPrev()}
-            disabled={!canPrev && filteredItems.length <= 2}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/50 text-gold transition-colors duration-300 hover:border-gold hover:text-ivory disabled:opacity-30"
-          >
-            <ChevronLeft className="h-4 w-4" strokeWidth={1.5} />
-          </button>
+      <Reveal delay={0.12}>
+        <div className="mt-6 rounded-[1.75rem] bg-[#F3F3F3] p-6 sm:mt-8 sm:rounded-[2rem] sm:p-8 lg:p-10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.55fr)] lg:items-start lg:gap-12 xl:gap-16">
+            <div className="flex max-w-md flex-col lg:pt-2">
+              <h2 className="font-serif-display text-3xl font-medium leading-[1.15] tracking-tight text-[#1A1A1A] sm:text-4xl lg:text-[2.65rem]">
+                {panel.title}
+              </h2>
+              <p className="mt-5 font-body text-sm leading-relaxed text-[#5C5C5C] sm:text-base">
+                {panel.text}
+              </p>
+              <button
+                type="button"
+                data-testid="kufri-see-all"
+                onClick={() => onVisit?.({ id: filter })}
+                className="mt-8 inline-flex items-center gap-2 self-start font-body text-sm font-semibold text-[#1A1A1A] transition-colors duration-300 hover:text-[#9A7B4F] sm:mt-10"
+              >
+                {panel.cta}
+                <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              </button>
+            </div>
 
-          <button
-            type="button"
-            aria-label="Next"
-            data-testid="kufri-portfolio-next"
-            onClick={() => emblaApi?.scrollNext()}
-            disabled={!canNext && filteredItems.length <= 2}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/50 text-gold transition-colors duration-300 hover:border-gold hover:text-ivory disabled:opacity-30"
-          >
-            <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
-          </button>
+            <div className="min-w-0 overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {filteredItems.map((item) => (
+                  <div
+                    key={item.key ?? item.img}
+                    className="min-w-0 shrink-0 grow-0 basis-[78%] pr-4 sm:basis-[46%] sm:pr-5 lg:basis-[38%] xl:basis-[34%]"
+                  >
+                    <PortfolioCard item={item} onVisit={onVisit} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function KufriPortfolioHeader() {
-  return (
-    <div className="mx-auto max-w-4xl text-center">
-      <Reveal>
-        <Overline>Chapter Five — Why Kufri</Overline>
-      </Reveal>
-      <Reveal delay={0.08}>
-        <SectionTitle className="mt-6 text-center">
-          Some places become famous.
-          <br />
-          Kufri became timeless.
-        </SectionTitle>
-      </Reveal>
-      <Reveal delay={0.14}>
-        <SectionLead className="mx-auto mt-6 max-w-2xl text-center">
-          Mist drifts through the valley. The forest breathes deep, green and alive.
-        </SectionLead>
       </Reveal>
     </div>
   );

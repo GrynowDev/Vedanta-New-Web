@@ -30,9 +30,7 @@ import CollectionCard, {
   CollectionHeader,
   CollectionSeeAll,
 } from "../components/CollectionCard";
-import KufriPortfolio, {
-  KufriPortfolioHeader,
-} from "../components/KufriPortfolio";
+import KufriPortfolio from "../components/KufriPortfolio";
 import TrustStats from "../components/TrustStats";
 import PropertyMarquee from "../components/PropertyMarquee";
 import TrustedBrands from "../components/TrustedBrands";
@@ -183,23 +181,33 @@ function Philosophy() {
   return (
     <section
       id="philosophy"
-      className="relative bg-section px-6 py-16 sm:px-10 lg:py-24"
+      className="relative min-h-[85vh] overflow-hidden sm:min-h-[90vh]"
       data-testid="philosophy-section"
     >
-      <div className="mx-auto grid max-w-[1400px] items-center gap-16 lg:grid-cols-2 lg:gap-24">
-        <div>
+      <div className="absolute inset-0">
+        <img
+          src="/Homepage/luxury-changed-its-mind.png"
+          alt=""
+          className="h-full w-full object-cover object-[72%_center]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/55 to-forest-deep/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-forest-deep/30" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-[1400px] flex-col justify-between px-6 py-16 sm:min-h-[90vh] sm:px-10 lg:py-24">
+        <div className="max-w-2xl pt-6 lg:pt-10">
           <Reveal>
             <Overline>Two — The Shift</Overline>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
+            <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.08] tracking-tight text-ivory sm:text-5xl lg:text-6xl xl:text-7xl">
               Luxury changed
               <br />
               its mind.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-8 max-w-xl font-body text-lg font-light leading-relaxed text-ivory/70">
+            <p className="mt-4 mb-8 max-w-xl font-body text-base font-light leading-relaxed text-ivory/80 sm:text-lg">
               It used to be measured in marble, and mileage, and more. Now it is
               measured in less — less noise, less urgency, fewer things standing
               between you and your own life. What remains is quieter, and far
@@ -207,40 +215,26 @@ function Philosophy() {
               while.
             </p>
           </Reveal>
-          <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2">
-            {PHILOSOPHY.map((p, i) => {
-              const Icon = PHIL_ICONS[i];
-              return (
-                <Reveal key={p.title} delay={0.1 * i}>
-                  <div className="border-t border-gold/20 pt-5">
-                    <Icon className="h-5 w-5 text-gold" strokeWidth={1.3} />
-                    <h3 className="mt-4 font-serif-display text-2xl text-ivory">
-                      {p.title}
-                    </h3>
-                    <p className="mt-2 font-body text-sm font-light leading-relaxed text-ivory/55">
-                      {p.text}
-                    </p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
         </div>
-        <Reveal delay={0.2} className="relative">
-          <div className="img-zoom-wrap rounded-3xl">
-            <img
-              src={MEDIA.mistyForest}
-              alt="Misty Himalayan forest"
-              className="img-zoom h-[640px] w-full rounded-3xl object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-8 -left-8 hidden rounded-2xl border border-gold/20 bg-forest/70 p-6 backdrop-blur-xl sm:block">
-            <span className="font-serif-display text-4xl text-gold">08</span>
-            <p className="mt-1 font-body text-[10px] uppercase tracking-[0.3em] text-ivory/70">
-              Guests at a time
-            </p>
-          </div>
-        </Reveal>
+
+        <div className="mt-16 grid gap-8 border-t border-ivory/20 pt-8 sm:mt-20 sm:grid-cols-2 lg:mt-0 lg:grid-cols-4 lg:gap-10">
+          {PHILOSOPHY.map((p, i) => {
+            const Icon = PHIL_ICONS[i];
+            return (
+              <Reveal key={p.title} delay={0.08 * i}>
+                <div>
+                  <Icon className="h-5 w-5 text-gold" strokeWidth={1.3} />
+                  <h3 className="mt-4 font-serif-display text-xl text-ivory sm:text-2xl">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 font-body text-sm font-light leading-relaxed text-ivory/65">
+                    {p.text}
+                  </p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -253,35 +247,36 @@ function WhyKufri() {
   return (
     <section
       id="kufri"
-      className="bg-section px-6 py-14 sm:px-10 lg:py-20"
+      className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
       data-testid="kufri-section"
     >
       <div className="mx-auto max-w-[1400px]">
-        <KufriPortfolioHeader />
-
-        <Reveal delay={0.2} className="mt-14 lg:mt-16">
-          <KufriPortfolio
-            items={SEASONS}
-            onVisit={() => router.push("/contact")}
-          />
-        </Reveal>
+        <KufriPortfolio
+          items={SEASONS}
+          onVisit={() => router.push("/contact")}
+        />
       </div>
     </section>
   );
 }
 
-/* ----------------------- EXPERIENCE NATURE ----------------------- */
-function ExperienceNature() {
+/* ------------------ EXPERIENCE & WELLBEING ---------------------- */
+function ExperienceWellbeing() {
+  const items = [
+    ...NATURE.map((item) => ({ ...item, group: "experience" })),
+    ...WELLNESS.map((item) => ({ ...item, group: "wellbeing" })),
+  ];
+
   return (
     <section
-      id="nature"
+      id="experience"
       className="bg-section px-6 py-16 sm:px-10 lg:py-24"
-      data-testid="nature-section"
+      data-testid="experience-wellbeing-section"
     >
       <div className="mx-auto max-w-[1400px]">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <Overline>Five — The Experience</Overline>
+            <Overline>Five — Experience & Wellbeing</Overline>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-6xl">
@@ -290,26 +285,39 @@ function ExperienceNature() {
               You feel more.
             </h2>
           </Reveal>
+          <Reveal delay={0.18}>
+            <p className="mx-auto mt-8 max-w-2xl font-body text-base font-light leading-relaxed text-ivory/70 sm:text-lg">
+              Cool, clean mountain air. Long walks beneath the cedars. The
+              particular calm that arrives with altitude and quiet. Nothing to
+              fix — only to slow. A wellness retreat is planned to join Vedanta,
+              though the first therapy is simply being here.
+            </p>
+          </Reveal>
         </div>
-        <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {NATURE.map((n, i) => (
-            <Reveal key={n.title} delay={0.08 * i}>
-              <div className="img-zoom-wrap group relative h-[440px] rounded-3xl">
+
+        <div className="mt-16 grid gap-5 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {items.map((item, i) => (
+            <Reveal key={`${item.group}-${item.title}`} delay={0.05 * (i % 4)}>
+              <article className="img-zoom-wrap group relative h-[420px] overflow-hidden rounded-3xl sm:h-[460px] lg:h-[500px]">
                 <img
-                  src={n.img}
-                  alt={n.title}
-                  className="img-zoom h-full w-full rounded-3xl object-cover"
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  className="img-zoom h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-forest-deep/90 via-transparent to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-7">
-                  <h3 className="font-serif-display text-2xl text-ivory">
-                    {n.title}
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
+                  <p className="font-body text-[10px] uppercase tracking-[0.28em] text-gold/90">
+                    {item.group === "experience" ? "Experience" : "Wellbeing"}
+                  </p>
+                  <h3 className="mt-2 font-serif-display text-2xl text-ivory">
+                    {item.title}
                   </h3>
-                  <p className="mt-2 font-body text-sm font-light text-ivory/60">
-                    {n.text}
+                  <p className="mt-2 font-body text-sm font-light leading-relaxed text-ivory/65">
+                    {item.text}
                   </p>
                 </div>
-              </div>
+              </article>
             </Reveal>
           ))}
         </div>
@@ -328,57 +336,66 @@ function Villas() {
       data-testid="villas-section"
     >
       <div className="mx-auto max-w-[1400px]">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-          <Reveal className="img-zoom-wrap rounded-3xl">
-            <img
-              src={MEDIA.villaExterior1}
-              alt="Vedanta villa"
-              className="img-zoom h-[560px] w-full rounded-3xl object-cover"
-            />
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24">
+          <Reveal>
+            <div className="overflow-hidden rounded-[1.75rem]">
+              <img
+                src={MEDIA.villaExterior1}
+                alt="Vedanta villa at twilight"
+                className="h-[480px] w-full object-cover sm:h-[560px] lg:h-[680px]"
+              />
+            </div>
           </Reveal>
+
           <div className="flex flex-col justify-center">
             <Reveal>
               <Overline>Four — The Residences</Overline>
             </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
+            <Reveal delay={0.08}>
+              <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-[3.4rem] lg:leading-[1.12]">
                 Rooms that remember
                 <br />
                 how to be quiet.
               </h2>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-8 max-w-xl font-body text-lg font-light leading-relaxed text-ivory/70">
+
+            <Reveal delay={0.14}>
+              <p className="mt-7 max-w-lg font-body text-base font-light leading-relaxed text-ivory/70 sm:text-lg">
                 Eight neo-classical mansions, each turned toward the Himalaya.
                 Stone that carries weight. Timber that carries warmth. Glass
                 that hands the mountains back to you, whole. Room enough to
                 gather everyone you love — still enough to hear yourself think.
               </p>
             </Reveal>
-            <div className="mt-12 grid grid-cols-2 gap-8">
-              {VILLA_SPECS.map((s, i) => (
-                <Reveal key={s.label} delay={0.08 * i}>
-                  <div className="border-t border-gold/20 pt-4">
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-serif-display text-4xl text-gold">
+
+            <Reveal delay={0.2}>
+              <div className="mt-10 grid grid-cols-2 border-t border-l border-gold/20">
+                {VILLA_SPECS.map((s) => (
+                  <div
+                    key={s.label}
+                    className="border-b border-r border-gold/20 px-5 py-6 sm:px-6 sm:py-7"
+                  >
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      <span className="font-serif-display text-3xl text-gold sm:text-4xl">
                         {s.value}
                       </span>
-                      <span className="font-body text-xs uppercase tracking-[0.2em] text-ivory/50">
+                      <span className="font-body text-[10px] uppercase tracking-[0.22em] text-ivory/50 sm:text-xs">
                         {s.unit}
                       </span>
                     </div>
-                    <p className="mt-1 font-body text-sm text-ivory/60">
+                    <p className="mt-2 font-body text-xs text-ivory/60 sm:text-sm">
                       {s.label}
                     </p>
                   </div>
-                </Reveal>
-              ))}
-            </div>
-            <Reveal delay={0.3}>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.26}>
               <button
                 data-testid="villas-explore-btn"
                 onClick={() => router.push("/villas")}
-                className="group mt-12 inline-flex items-center gap-3 font-body text-xs uppercase tracking-[0.25em] text-gold"
+                className="group mt-10 inline-flex items-center gap-3 font-body text-xs uppercase tracking-[0.25em] text-gold transition-colors duration-300 hover:text-ivory"
               >
                 See the Residences
                 <ArrowRight
@@ -388,62 +405,6 @@ function Villas() {
               </button>
             </Reveal>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ------------------------- WELLNESS ----------------------------- */
-function Wellness() {
-  return (
-    <section
-      id="wellness"
-      className="bg-section px-6 py-16 sm:px-10 lg:py-24"
-      data-testid="wellness-section"
-    >
-      <div className="mx-auto max-w-[1400px]">
-        <div className="max-w-2xl">
-          <Reveal>
-            <Overline>Seven — Wellbeing</Overline>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-6xl">
-              Nothing to fix.
-              <br />
-              Only to slow.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-8 max-w-xl font-body text-lg font-light leading-relaxed text-ivory/70">
-              Cool, clean mountain air. Long walks beneath the cedars. The
-              particular calm that arrives with altitude and quiet. A wellness
-              retreat and medical wellness centre are planned to join Vedanta —
-              though the first therapy is simply being here, doing less.
-            </p>
-          </Reveal>
-        </div>
-        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {WELLNESS.map((w, i) => (
-            <Reveal key={w.title} delay={0.08 * i}>
-              <div className="img-zoom-wrap group relative h-[520px] rounded-3xl">
-                <img
-                  src={w.img}
-                  alt={w.title}
-                  className="img-zoom h-full w-full rounded-3xl object-cover"
-                />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-forest-deep/90 via-forest-deep/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-7">
-                  <h3 className="font-serif-display text-2xl text-ivory">
-                    {w.title}
-                  </h3>
-                  <p className="mt-2 font-body text-sm font-light text-ivory/65">
-                    {w.text}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
         </div>
       </div>
     </section>
@@ -620,8 +581,7 @@ export default function Home() {
       <Villas />
       <ResidenceShowcase />
       <WhyKufri />
-      <ExperienceNature />
-      <Wellness />
+      <ExperienceWellbeing />
       <Sustainability />
       <TestimonialsSection items={TESTIMONIALS} />
       <ContactSection />
