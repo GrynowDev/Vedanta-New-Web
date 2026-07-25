@@ -1,7 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Snowfall from "@/components/Snowfall";
 import AmbientSound from "@/components/AmbientSound";
 import ScrollToTop from "@/components/ScrollToTop";
 import AppToaster from "@/components/AppToaster";
@@ -75,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div className="App grain min-h-screen">
           <ScrollToTop />
           <Navbar />
-          <Snowfall count={55} />
           <AmbientSound />
           <main>{children}</main>
           <Footer />

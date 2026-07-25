@@ -38,6 +38,7 @@ import PropertyMarquee from "../components/PropertyMarquee";
 import TrustedBrands from "../components/TrustedBrands";
 import TestimonialsSection from "../components/TestimonialsSection";
 import DestinationsEscape from "../components/DestinationsEscape";
+import Snowfall from "../components/Snowfall";
 import {
   MEDIA,
   BROCHURE,
@@ -98,6 +99,8 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/60 via-transparent to-forest-deep/20" />
       </div>
 
+      <Snowfall count={55} />
+
       <motion.div
         style={{ opacity }}
         className="relative z-10 flex min-h-screen items-center px-4 pb-16 pt-28 sm:px-8 sm:pt-32 lg:px-12"
@@ -133,9 +136,9 @@ function Hero() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="mt-8 font-serif-display text-4xl font-light leading-[1.08] tracking-tight text-ivory sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              Find your Himalayan
+              Where Luxury
               <br />
-              sanctuary at Vedanta
+              Breathes with Nature
             </motion.h1>
 
             <Reveal delay={0.55}>
