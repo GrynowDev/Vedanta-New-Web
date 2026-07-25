@@ -1,22 +1,44 @@
 "use client";
 
 import React, { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { ArrowRight, ArrowUpRight, Plus, Leaf, Wind, Moon, Users, Home as HomeIcon, TreePine, Layers, Zap, Droplets, Footprints } from "lucide-react";
-import { Reveal, Overline, SectionTitle, SectionLead } from "../components/Reveal";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Plus,
+  Leaf,
+  Wind,
+  Moon,
+  Users,
+  Home as HomeIcon,
+  TreePine,
+  Layers,
+  Zap,
+  Droplets,
+  Footprints,
+} from "lucide-react";
+import {
+  Reveal,
+  Overline,
+  SectionTitle,
+  SectionLead,
+} from "../components/Reveal";
 import EnquiryForm from "../components/EnquiryForm";
 import SwipeCarousel from "../components/SwipeCarousel";
-import CollectionCard, { CollectionHeader, CollectionSeeAll } from "../components/CollectionCard";
-import KufriPortfolio, { KufriPortfolioHeader } from "../components/KufriPortfolio";
+import CollectionCard, {
+  CollectionHeader,
+  CollectionSeeAll,
+} from "../components/CollectionCard";
+import KufriPortfolio, {
+  KufriPortfolioHeader,
+} from "../components/KufriPortfolio";
 import TrustStats from "../components/TrustStats";
 import PropertyMarquee from "../components/PropertyMarquee";
 import TrustedBrands from "../components/TrustedBrands";
 import TestimonialsSection from "../components/TestimonialsSection";
+import DestinationsEscape from "../components/DestinationsEscape";
+import Snowfall from "../components/Snowfall";
 import {
   MEDIA,
   BROCHURE,
@@ -32,6 +54,8 @@ import {
   TRUST_STATS,
   PROPERTY_MARQUEE,
   TRUSTED_BRANDS,
+  DESTINATION_FILTERS,
+  DESTINATIONS,
 } from "../data";
 
 const PHIL_ICONS = [Wind, Leaf, Users, Moon];
@@ -75,6 +99,8 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/60 via-transparent to-forest-deep/20" />
       </div>
 
+      <Snowfall count={55} />
+
       <motion.div
         style={{ opacity }}
         className="relative z-10 flex min-h-screen items-center px-4 pb-16 pt-28 sm:px-8 sm:pt-32 lg:px-12"
@@ -110,9 +136,9 @@ function Hero() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="mt-8 font-serif-display text-4xl font-light leading-[1.08] tracking-tight text-ivory sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              Find your Himalayan
+              Where Luxury
               <br />
-              sanctuary at Vedanta
+              Breathes with Nature
             </motion.h1>
 
             <Reveal delay={0.55}>
@@ -148,37 +174,6 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-    </section>
-  );
-}
-
-/* ---------------------------- WELCOME --------------------------- */
-function Welcome() {
-  return (
-    <section
-      id="welcome"
-      className="relative bg-section px-6 py-16 sm:px-10 lg:py-24"
-      data-testid="welcome-section"
-    >
-      <div className="mx-auto max-w-4xl text-center">
-        <Reveal>
-          <Overline>One — Arrival</Overline>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="mt-8 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
-            You didn't come to escape.
-            <br />
-            You came to return.
-          </h2>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-8 max-w-2xl font-body text-lg font-light leading-relaxed text-ivory/70">
-            To mornings that begin slowly. To air that asks nothing of you. To
-            conversations no notification interrupts. Somewhere above the noise,
-            the mountains have been keeping a place for you.
-          </p>
-        </Reveal>
-      </div>
     </section>
   );
 }
@@ -455,7 +450,14 @@ function Wellness() {
   );
 }
 
-const STEWARDSHIP_ICONS = [HomeIcon, TreePine, Layers, Zap, Droplets, Footprints];
+const STEWARDSHIP_ICONS = [
+  HomeIcon,
+  TreePine,
+  Layers,
+  Zap,
+  Droplets,
+  Footprints,
+];
 
 /* -------------------- SUSTAINABILITY ---------------------------- */
 function Sustainability() {
@@ -559,10 +561,7 @@ function ContactSection() {
             </a>
           </div>
         </div>
-        <Reveal
-          delay={0.2}
-          className="card-panel-lg p-8 sm:p-10"
-        >
+        <Reveal delay={0.2} className="card-panel-lg p-8 sm:p-10">
           <EnquiryForm />
         </Reveal>
       </div>
@@ -613,7 +612,10 @@ export default function Home() {
         subtitle="Trusted sanctuary for immersive stays, private ownership, and life above the valley — crafted with care in Kufri."
       />
       <PropertyMarquee items={PROPERTY_MARQUEE} />
-      <Welcome />
+      <DestinationsEscape
+        filters={DESTINATION_FILTERS}
+        destinations={DESTINATIONS}
+      />
       <Philosophy />
       <Villas />
       <ResidenceShowcase />
