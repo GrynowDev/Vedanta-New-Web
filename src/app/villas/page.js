@@ -1,22 +1,8 @@
-import VillasPage from "@/views/Villas";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-static";
 
-export const metadata = {
-  title: "Residences & Villas",
-  description:
-    "Explore Vedanta residences in Kufri — spacious Himalayan villas with private decks, cedar interiors, and panoramic mountain views.",
-  alternates: {
-    canonical: "/villas",
-  },
-  openGraph: {
-    title: "Residences & Villas | Vedanta",
-    description:
-      "Spacious Himalayan villas with private decks, cedar interiors, and panoramic mountain views in Kufri.",
-    url: "/villas",
-  },
-};
-
+/** Legacy URL — permanently redirected in next.config.js; keep page for safety. */
 export default function Page() {
-  return <VillasPage />;
+  redirect("/luxury-villas-in-kufri");
 }

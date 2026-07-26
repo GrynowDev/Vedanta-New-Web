@@ -22,7 +22,7 @@ function BrandLogo({ brand, index }) {
           src={brand.logo}
           alt={brand.name}
           loading="lazy"
-          className="h-7 max-w-[160px] object-contain opacity-50 grayscale transition-opacity duration-300 hover:opacity-80 sm:h-8"
+          className="h-10 max-w-[180px] object-contain opacity-70 mix-blend-screen transition-opacity duration-300 hover:opacity-100 sm:h-12"
         />
       </div>
     );
@@ -30,10 +30,7 @@ function BrandLogo({ brand, index }) {
 
   return (
     <div className="mx-8 flex shrink-0 items-center gap-2.5 sm:mx-10">
-      <Icon
-        className="h-5 w-5 text-ivory/35 sm:h-6 sm:w-6"
-        strokeWidth={1.5}
-      />
+      <Icon className="h-5 w-5 text-ivory/35 sm:h-6 sm:w-6" strokeWidth={1.5} />
       <span className="whitespace-nowrap font-body text-base font-medium tracking-tight text-ivory/45 transition-colors duration-300 hover:text-ivory/70 sm:text-lg">
         {brand.name}
       </span>
@@ -41,10 +38,7 @@ function BrandLogo({ brand, index }) {
   );
 }
 
-export default function TrustedBrands({
-  brands,
-  title = "Trusted Real Estate Partners",
-}) {
+export default function TrustedBrands({ brands, title = "Trusted Partners" }) {
   const track = useMemo(() => [...brands, ...brands], [brands]);
 
   return (

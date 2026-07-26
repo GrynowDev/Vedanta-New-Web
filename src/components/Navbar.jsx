@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
-  { label: "Residences", to: "/villas" },
+  { label: "Residences", to: "/luxury-villas-in-kufri" },
   { label: "Gallery", to: "/gallery" },
   { label: "Blog", to: "/blogs" },
 ];

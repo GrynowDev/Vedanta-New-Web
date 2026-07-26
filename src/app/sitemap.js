@@ -2,7 +2,7 @@ import { BLOGS } from "@/data";
 
 export default function sitemap() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  const routes = ["", "/villas", "/gallery", "/blogs", "/contact"];
+  const routes = ["", "/luxury-villas-in-kufri", "/gallery", "/blogs", "/contact"];
 
   const staticEntries = routes.map((route) => ({
     url: `${siteUrl}${route}`,
