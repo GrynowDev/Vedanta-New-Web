@@ -31,6 +31,16 @@ module.exports = {
         stone: '#8B8C89',
         wood: '#8B5A2B',
         slate: '#1A1A1A',
+        parchment: {
+          DEFAULT: '#F3EFE2',
+          deep: '#ECE6D5',
+        },
+        brass: {
+          DEFAULT: '#B08D57',
+          soft: '#C4A878',
+        },
+        ink: '#1C221E',
+        sage: '#5C6B5C',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

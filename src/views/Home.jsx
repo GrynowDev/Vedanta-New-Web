@@ -37,6 +37,7 @@ import TrustedBrands from "../components/TrustedBrands";
 import TestimonialsSection from "../components/TestimonialsSection";
 import DestinationsEscape from "../components/DestinationsEscape";
 import Snowfall from "../components/Snowfall";
+import EnquiryPopup, { openEnquiryPopup } from "../components/EnquiryPopup";
 import {
   MEDIA,
   BROCHURE,
@@ -152,7 +153,7 @@ function Hero() {
             >
               <button
                 data-testid="hero-book-btn"
-                onClick={() => router.push("/contact")}
+                onClick={openEnquiryPopup}
                 className="rounded-full bg-ivory px-7 py-3.5 font-body text-sm font-semibold text-forest transition-colors duration-200 hover:bg-white"
               >
                 Contact us
@@ -479,10 +480,20 @@ function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative bg-section px-6 py-16 sm:px-10 lg:py-24"
+      className="relative overflow-hidden px-6 py-16 sm:px-10 lg:py-24"
       data-testid="contact-section"
     >
-      <div className="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-2 lg:gap-24">
+      <div className="absolute inset-0">
+        <img
+          src="/Homepage/reserve.png"
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-forest-deep/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/55 to-forest-deep/40" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
           <Reveal>
             <Overline>Reservations</Overline>
@@ -522,8 +533,8 @@ function ContactSection() {
             </a>
           </div>
         </div>
-        <Reveal delay={0.2} className="card-panel-lg p-8 sm:p-10">
-          <EnquiryForm />
+        <Reveal delay={0.2} className="rounded-[4px] bg-parchment p-8 shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:p-10">
+          <EnquiryForm idPrefix="home-enq" testId="enquiry-form" />
         </Reveal>
       </div>
     </section>
@@ -585,6 +596,7 @@ export default function Home() {
       <Sustainability />
       <TestimonialsSection items={TESTIMONIALS} />
       <ContactSection />
+      <EnquiryPopup />
     </>
   );
 }

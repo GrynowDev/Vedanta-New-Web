@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AmbientSound from "@/components/AmbientSound";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import AppToaster from "@/components/AppToaster";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
@@ -20,6 +21,11 @@ export const metadata = {
   },
   description:
     "Vedanta — a private collection of Himalayan mansions in Kufri, kept for immersive short stays. Cedar forests, mountain air, and the rare quiet of 8,500 feet.",
+  icons: {
+    icon: "/Homepage/favicon.png",
+    shortcut: "/Homepage/favicon.png",
+    apple: "/Homepage/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -73,6 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div className="App grain min-h-screen">
           <ScrollToTop />
+          <WhatsAppFloat />
           <Navbar />
           <AmbientSound />
           <main>{children}</main>
