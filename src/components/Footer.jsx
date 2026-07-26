@@ -8,8 +8,11 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <span className="block font-serif-display text-3xl tracking-[0.22em] text-ivory">VEDANTA</span>
-            <span className="mt-1 block font-body text-[10px] uppercase tracking-[0.4em] text-gold/80">by Vaishno Group</span>
+            <img
+              src="/Homepage/vedanta-white-logo.png"
+              alt="Vedanta by Vaishno Group"
+              className="h-12 w-auto sm:h-14"
+            />
             <p className="mt-6 max-w-md font-body text-sm font-light leading-relaxed text-ivory/60">
               A private collection of eight Himalayan residences in Kufri, offered as intimate
               mountain retreats. A home away from home — timeless, private, and profoundly still.
@@ -30,7 +33,10 @@ export default function Footer() {
             <h4 className="font-body text-[11px] uppercase tracking-[0.3em] text-gold">Connect</h4>
             <ul className="mt-5 space-y-3 font-body text-sm text-ivory/70">
               <li><a href={`mailto:${CONTACT.email}`} className="link-underline hover:text-ivory">{CONTACT.email}</a></li>
-              <li><a href={`tel:${CONTACT.phone}`} className="link-underline hover:text-ivory">{CONTACT.phone}</a></li>
+              <li><a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} className="link-underline hover:text-ivory">{CONTACT.phone}</a></li>
+              {CONTACT.phoneAlt && (
+                <li><a href={`tel:${CONTACT.phoneAlt.replace(/\s/g, "")}`} className="link-underline hover:text-ivory">{CONTACT.phoneAlt}</a></li>
+              )}
               <li><a href={waLink} target="_blank" rel="noreferrer" className="link-underline hover:text-ivory">WhatsApp</a></li>
             </ul>
           </div>

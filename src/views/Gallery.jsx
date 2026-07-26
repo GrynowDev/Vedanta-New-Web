@@ -43,7 +43,7 @@ export default function Gallery() {
             {items.map((g, i) => (
               <motion.div
                 layout
-                key={g.img}
+                key={`${g.cat}-${g.img}-${i}`}
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -51,7 +51,12 @@ export default function Gallery() {
                 className="img-zoom-wrap group relative break-inside-avoid rounded-3xl"
                 data-testid={`gallery-item-${i}`}
               >
-                <img src={g.img} alt={g.cat} className="img-zoom w-full rounded-3xl object-cover" />
+                <img
+                  src={g.img}
+                  alt={g.cat}
+                  loading="lazy"
+                  className="img-zoom w-full rounded-3xl object-cover"
+                />
                 <div className="absolute inset-0 flex items-end rounded-3xl bg-gradient-to-t from-forest-deep/80 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <span className="font-body text-[11px] uppercase tracking-[0.25em] text-gold">{g.cat}</span>
                 </div>

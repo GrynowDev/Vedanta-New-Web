@@ -57,8 +57,8 @@ export default function Contact() {
             </div>
           </div>
 
-          <Reveal delay={0.15} className="rounded-3xl border border-gold/15 bg-forest/40 p-8 backdrop-blur-sm sm:p-10">
-            <EnquiryForm />
+          <Reveal delay={0.15} className="rounded-[4px] bg-parchment p-8 shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:p-10">
+            <EnquiryForm idPrefix="contact-enq" testId="enquiry-form" />
           </Reveal>
         </div>
       </div>

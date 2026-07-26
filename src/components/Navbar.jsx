@@ -5,8 +5,6 @@ import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
-  { label: "Home", to: "/" },
-  { label: "Philosophy", to: "/#philosophy" },
   { label: "Residences", to: "/villas" },
   { label: "Gallery", to: "/gallery" },
   { label: "Blog", to: "/blogs" },
@@ -63,13 +61,13 @@ export default function Navbar() {
             onClick={() => handleNav("/")}
             data-testid="logo-home"
             className="text-left leading-none"
+            aria-label="Vedanta by Vaishno Group — Home"
           >
-            <span className="block font-serif-display text-xl tracking-[0.22em] text-forest-deep sm:text-2xl">
-              VEDANTA
-            </span>
-            <span className="mt-1 block font-body text-[8px] uppercase tracking-[0.4em] text-gold/80 sm:text-[9px]">
-              by Vaishno Group
-            </span>
+            <img
+              src="/Homepage/vedanta-logo.png"
+              alt="Vedanta by Vaishno Group"
+              className="h-9 w-auto sm:h-11"
+            />
           </button>
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -115,14 +113,11 @@ export default function Navbar() {
         data-testid="mobile-menu"
       >
         <div className="flex items-center justify-between px-6 py-6">
-          <div className="leading-none">
-            <span className="block font-serif-display text-xl tracking-[0.22em] text-ivory">
-              VEDANTA
-            </span>
-            <span className="mt-1 block font-body text-[8px] uppercase tracking-[0.4em] text-gold/80">
-              by Vaishno Group
-            </span>
-          </div>
+          <img
+            src="/Homepage/vedanta-white-logo.png"
+            alt="Vedanta by Vaishno Group"
+            className="h-9 w-auto"
+          />
           <button
             onClick={() => setOpen(false)}
             data-testid="mobile-menu-close"

@@ -1,20 +1,12 @@
-import { notFound } from "next/navigation";
 import BlogPost from "@/views/BlogPost";
 import { BLOGS, getBlogBySlug } from "@/data";
 
+const SLUG = "visit-kufri-during-monsoon";
+const post = getBlogBySlug(SLUG);
+
 export const dynamic = "force-static";
 
-export function generateStaticParams() {
-  return BLOGS.map((post) => ({ slug: post.slug }));
-}
-
-export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const post = getBlogBySlug(slug);
-  if (!post) {
-    return { title: "Story Not Found" };
-  }
-
+export function generateMetadata() {
   return {
     title: post.title,
     description: post.excerpt,
@@ -38,12 +30,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function Page({ params }) {
-  const { slug } = await params;
-  const post = getBlogBySlug(slug);
-  if (!post) notFound();
-
+export default function Page() {
   const related = BLOGS.filter((b) => b.slug !== post.slug).slice(0, 3);
-
   return <BlogPost post={post} related={related} />;
 }
