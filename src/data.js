@@ -128,6 +128,320 @@ export const VILLA_FEATURES = [
   "Basic smart-home package & keyless entry",
 ];
 
+/** Inventory for /luxury-villas-in-kufri — eight private mansions, shared specs. */
+export const LUXURY_VILLAS = [
+  {
+    slug: "cedar-crest",
+    name: "Cedar Crest",
+    description:
+      "A mountain-facing residence with a wide private lawn and evening light across the pines. Built for long family stays and quiet group weekends.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Mountain-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.villaTwilight,
+  },
+  {
+    slug: "pine-haven",
+    name: "Pine Haven",
+    description:
+      "Tucked toward the forest edge, with cedar shade on the lawn and cooler mornings. Ideal when you want the trees closer than the valley.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Forest-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.villaDay,
+  },
+  {
+    slug: "valley-house",
+    name: "Valley House",
+    description:
+      "Open valley views from the living floors and balconies. A strong pick for sunrise coffee and wide-sky evenings.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Valley-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.greatRoom,
+  },
+  {
+    slug: "deodar-nest",
+    name: "Deodar Nest",
+    description:
+      "Calm interiors framed by deodar cover, with a lawn sized for bonfires and kids underfoot. Quiet even when the estate is full.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Forest-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.livingFireplace,
+  },
+  {
+    slug: "horizon-villa",
+    name: "Horizon Villa",
+    description:
+      "Layered mountain ranges fill the upper terraces. Best when the trip is about long views and unhurried afternoons indoors.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Mountain-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.bedroomStone,
+  },
+  {
+    slug: "orchard-edge",
+    name: "Orchard Edge",
+    description:
+      "Steps from orchard walks and soft late-summer light. A natural fit for families who want outdoors without a long drive.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Valley-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.kitchen,
+  },
+  {
+    slug: "mistwood",
+    name: "Mistwood",
+    description:
+      "Often wrapped in morning mist, with a glass conservatory that makes grey weather feel intentional. Suited to monsoon and winter stays.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Forest-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.conservatory,
+  },
+  {
+    slug: "summit-residence",
+    name: "Summit Residence",
+    description:
+      "The highest-feeling outlook in the collection — mountain light, wide balconies, and a lawn built for night skies.",
+    bedrooms: "5 bedrooms, 5 bathrooms",
+    guests: "Up to 10 guests",
+    view: "Mountain-facing",
+    features: [
+      "Private lawn (~1,800 sq.ft)",
+      "In-house cook",
+      "Bonfire area",
+      "Parking for 2 cars",
+      "Heating & VRF AC",
+    ],
+    price: "Enquire for rates",
+    img: BROCHURE.estateAerial,
+  },
+];
+
+export const VILLA_AMENITY_GROUPS = [
+  {
+    title: "Comfort and entertainment",
+    items: [
+      "Double-height living room with a private bar lounge",
+      "Gaming lounge, library lounge and a glass conservatory",
+      "Outdoor Jacuzzi and a private terrace",
+      "Fireplace in every villa",
+      "Private passenger lift (Otis, 6-person) to all floors",
+      "Valley-facing rooms, each with its own balcony 10 to 15 ft wide",
+    ],
+  },
+  {
+    title: "Kitchen",
+    items: [
+      "Fully fitted modular kitchen (Aura or equivalent)",
+      "Built-in appliances: RO, chimney, geyser, hob, microwave, OTG, refrigerator and dishwasher",
+    ],
+  },
+  {
+    title: "Finishes and fittings",
+    items: [
+      "Italian and Turkish stone on floors and walls, engineered wood in living areas",
+      "Full-height teakwood wardrobes with lockers in every bedroom",
+      "Kohler bathroom fittings, glass shower enclosures and a bathing tub",
+      "Fenesta UPVC double-glazed windows",
+      "Keyless entry (Yale or Godrej) and video door phone",
+    ],
+  },
+  {
+    title: "Climate, safety and structure",
+    items: [
+      "Mitsubishi VRF air conditioning throughout, hot and cold",
+      "Basic smart-home package for lighting and AC",
+      "Concealed wiring with Havells or Legrand switchgear and Schneider or Polycab cabling",
+      "Fire sprinklers as per RERA norms",
+      "Earthquake-resistant RCC structure (TATA Steel) with IKO roofing shingles",
+    ],
+  },
+  {
+    title: "Across the gated community",
+    items: [
+      "Three-tier security, secured boundary and CCTV surveillance",
+      "Golf cart to move around the township",
+      "Free Wi-Fi, 24×7 housekeeping and doctor-on-call",
+      "Grocery store inside the complex; market within 500 m",
+      "Individual gated parking for two cars per villa",
+      "Bonfire space, kids' play area, yoga site, meditation point, jogging track and landscaped sitting areas",
+    ],
+  },
+];
+
+export const VILLA_LIFE_EXPERIENCES = [
+  { title: "Slow Mornings", text: "Coffee, cold air, and a sky that takes its time.", img: BROCHURE.livingFireplace },
+  { title: "Forest Walks", text: "Trails through cedar and oak that end at a view.", img: BROCHURE.forestMist },
+  { title: "Apple Orchards", text: "Rows of fruit trees, heavy by late summer.", img: BROCHURE.villaDay },
+  { title: "The Night Sky", text: "Dark enough, at last, to find the Milky Way.", img: MEDIA.nightSky },
+  { title: "Forest Therapy", text: "Guided shinrin-yoku immersions among ancient deodars.", img: MEDIA.yoga },
+  { title: "Yoga & Meditation", text: "Dedicated yoga sites and meditation points facing the valley.", img: MEDIA.yoga },
+  { title: "Spa & Healing", text: "Restorative therapies drawn from Himalayan traditions.", img: MEDIA.spa },
+  { title: "Breathing Spaces", text: "Open decks and conservatories designed for stillness.", img: BROCHURE.conservatory },
+];
+
+export const VILLA_NEARBY = [
+  {
+    title: "Kufri Fun World",
+    text: "An amusement park with one of the highest go-kart tracks around, plus rides for kids. Good for a half-day with family.",
+    img: "/Homepage/Hip Hip Hurray Adventure Park.jpg",
+  },
+  {
+    title: "Mahasu Peak",
+    text: "The highest viewpoint in Kufri, with wide views of the surrounding ranges. Reach it on foot, by horse or on a short trek.",
+    img: "/nearby/mahasu-peak.png",
+  },
+  {
+    title: "Green Valley",
+    text: "A scenic stretch of pine and deodar forest along the Shimla to Kufri road. A popular stop for photos.",
+    img: "/nearby/green-valley.png",
+  },
+  {
+    title: "Himalayan Nature Park",
+    text: "A high-altitude zoo home to Himalayan wildlife, including a snow leopard breeding programme.",
+    img: "/nearby/himalayan-nature-park.png",
+  },
+  {
+    title: "Indira Tourist Park",
+    text: "A picnic and viewpoint spot close to the nature park.",
+    img: "/nearby/indira-tourist-park.png",
+  },
+  {
+    title: "Apple orchards & trails",
+    text: "Quiet walks through orchards and forest around Kufri — usually back in time for lunch.",
+    img: "/nearby/apple-orchards.png",
+  },
+];
+
+export const VILLA_SEASONS = [
+  {
+    title: "December – February",
+    label: "Snow season",
+    text: "Kufri turns white and skiing and snow play open up. The coldest stretch — villa heating matters most. Roads can be affected after heavy snowfall.",
+  },
+  {
+    title: "March – June",
+    label: "Summer escape",
+    text: "Days are pleasant, valleys are green, and this is the busiest booking window. Plan ahead.",
+  },
+  {
+    title: "July – September",
+    label: "Monsoon",
+    text: "The hills look lush but landslides and slow roads are possible. Keep travel plans flexible.",
+  },
+  {
+    title: "October – November",
+    label: "Clear skies",
+    text: "Quieter months with crisp air and open views. A good choice if you want the hills without peak-season crowds.",
+  },
+];
+
+export const VILLA_SUITS = [
+  "Families, including trips with older parents and young children",
+  "Groups of friends who want everyone under one roof",
+  "Couples looking for a quiet break with a view",
+  "Corporate offsites and small retreats",
+  "Celebrations such as anniversaries, birthdays and small destination gatherings",
+];
+
+export const VILLA_FAQS = [
+  {
+    q: "Is the villa fully private or shared?",
+    a: "Each villa is booked as a whole. You get the entire property to yourself, with no shared rooms or common areas.",
+  },
+  {
+    q: "Is food included in the tariff?",
+    a: "An in-house cook prepares home-style meals. The cooking service is included, while grocery costs are usually billed separately. We confirm the exact arrangement at the time of booking.",
+  },
+  {
+    q: "What are the check-in and check-out times?",
+    a: "Standard check-in is 2:00 PM and check-out is 11:00 AM. Early check-in or late check-out can be arranged on request, subject to availability.",
+  },
+  {
+    q: "Is there a minimum stay?",
+    a: "A two-night minimum applies on weekends and during peak season. Mid-week stays can be more flexible — ask when you enquire.",
+  },
+  {
+    q: "Will I get snow during my stay?",
+    a: "Snowfall is most likely between December and February, though it varies year to year and cannot be guaranteed. October to November and March offer clear views without the crowds.",
+  },
+  {
+    q: "Are the villas suitable for kids and elderly guests?",
+    a: "Yes. Being a single private property with a caretaker on site, our villas suit families travelling with children and older members. Let us know of any specific access needs when you book.",
+  },
+  {
+    q: "Is parking available?",
+    a: "Yes, free parking is available on the property — gated parking for two cars per villa. Share your vehicle count so we can plan space.",
+  },
+  {
+    q: "What is the cancellation policy?",
+    a: "Cancellation and refund terms depend on season and how far ahead you book. We share the exact policy in writing before you confirm.",
+  },
+  {
+    q: "How far is the villa from Shimla?",
+    a: "Kufri is around 15 km from Shimla, roughly a 45-minute to one-hour drive on NH5.",
+  },
+];
+
 // Swipeable residence showcase (authentic brochure renders)
 export const RESIDENCES = [
   {
@@ -352,15 +666,15 @@ export const SUSTAINABILITY = [
 ];
 
 export const TRUSTED_BRANDS = [
-  { name: "Tata Steel", logo: "/logos/tata-steel-logo.png" },
-  { name: "Kohler", logo: "/logos/KohlerLogoImage.jpeg" },
-  { name: "Otis", logo: "/logos/Otis_logo.SVG.webp" },
-  { name: "Havells", logo: "/logos/Havells_Logo.svg.webp" },
-  { name: "Mitsubishi", logo: "/logos/Mitsubishi-logo.png" },
-  { name: "Stonex India", logo: "/logos/stonex-india-vector-logo.png" },
-  { name: "Vaishno Group", logo: "/logos/logo.png" },
-  { name: "Partner", logo: "/logos/Group-18147242.webp" },
-  { name: "Polycab", logo: "/logos/polycab-logo.png" },
+  { name: "Tata Steel", logo: "/logos/tata-steel.png" },
+  { name: "Kohler", logo: "/logos/kohler.png" },
+  { name: "Otis", logo: "/logos/otis.png" },
+  { name: "Havells", logo: "/logos/havells.png" },
+  { name: "Mitsubishi", logo: "/logos/mitsubishi.png" },
+  { name: "Stonex India", logo: "/logos/stonex.png" },
+  { name: "IKO RoofPro", logo: "/logos/iko.png" },
+  { name: "Fenesta", logo: "/logos/fenesta.png" },
+  { name: "Polycab", logo: "/logos/polycab.png" },
 ];
 
 export const PROPERTY_MARQUEE = [
@@ -1182,7 +1496,7 @@ export const BLOGS = [
       "Reset & Detox Stays. A short-format program, typically 3 to 5 nights, built around digestive reset and nutrition. Meals are adjusted toward lighter, plant-forward, easily digested food; alcohol and processed food are removed from the itinerary entirely for the duration; and the first day or two are built around clean-air acclimatisation — allowing the body to adjust to elevation before any activity is layered in. This is less a detox in the juice-cleanse sense and more a structured pause: fewer inputs, more digestion, more rest.",
       "Sleep & Stress Recovery Programs. Aimed at guests carrying chronic sleep debt or sustained work stress, this program leans on the two things Kufri offers that a city can't: elevation and silence. The structure is deliberately simple — consistent wake and sleep times, reduced screen exposure in the evenings, and a room environment engineered specifically for quiet. That environmental design isn't incidental; it's a core part of how the villas themselves are built, as covered in how Vedanta's villas are designed for silence (https://www.vedantabyvaishnogroup.com/blogs/designing-for-silence-inside-a-himalayan-villa). A sleep-focused program only works if the room it happens in is actually silent, and that's been a design consideration from the ground up rather than an afterthought.",
       "Movement, Breathwork & Guided Practice. Yoga, pranayama, and guided outdoor movement sessions round out the program structure, adapted specifically for mountain terrain and altitude rather than a standard resort yoga class. Breathwork sessions are paced differently at elevation than at sea level — something a guided practitioner accounts for, and something a self-directed guest doing sun salutations off a YouTube video wouldn't necessarily know to adjust for. Outdoor movement sessions take advantage of the cedar forest trails around the property rather than confining practice to an indoor studio.",
-      "How the Wellness Centre Complements the Private Villa Stay. The model here isn't a shared clinical facility that guests visit on a schedule alongside strangers. It's built to layer onto Vedanta's private villa residences (https://www.vedantabyvaishnogroup.com/villas) — guests book their own villa, and wellness programs are delivered into that private space, rather than guests being moved into a communal wellness building.",
+      "How the Wellness Centre Complements the Private Villa Stay. The model here isn't a shared clinical facility that guests visit on a schedule alongside strangers. It's built to layer onto Vedanta's private villa residences (https://www.vedantabyvaishnogroup.com/luxury-villas-in-kufri) — guests book their own villa, and wellness programs are delivered into that private space, rather than guests being moved into a communal wellness building.",
       "That matters for two reasons. First, privacy: a guest doing a sleep-recovery program doesn't want to share a corridor with a dozen other guests on the same protocol. Second, it means the wellness centre doesn't require guests to choose between a private stay and a structured program — they get both, with practitioners and assessments coming to the villa environment rather than the guest being pulled out of it. It's a model that keeps the offering premium by design, not by price alone: it takes more coordination to deliver a medical-wellness program into a private villa than to run a shared spa floor, and that difficulty is part of what makes it hard to copy.",
       "Himalayan Wellness Stay: What a Typical Visit Looks Like. A typical Himalayan wellness stay at Vedanta runs somewhere between four and seven nights, though shorter reset stays and longer recovery programs are both accommodated. It generally starts with an arrival day built around nothing more than settling in and acclimatising to the altitude — no programming, no assessment, just rest after the journey up.",
       "Day two typically opens with a wellness assessment: a conversation with a practitioner about sleep, stress, digestion, and what the guest is actually hoping to get out of the stay, which shapes the specific protocol for the remaining days. From there, the days follow a rhythm rather than a packed itinerary — a morning movement or breathwork session, a structured mealtime, a block of guided rest or a nature walk in the afternoon, and an evening wind-down built around the sleep protocol. The last day is left deliberately light, giving guests time to notice the difference between how they felt on arrival and how they feel leaving.",
@@ -1219,7 +1533,7 @@ export const BLOGS = [
       "Best Months for Blossom vs Harvest. If blossom photography is the goal, plan for March to April — this is when the orchard is in full bloom and the trees are at their most photogenic, usually a week or two before the wider hillside greens up. If hand-picking apples is the priority, August through October is harvest season across Himachal's apple belt, a window well documented in regional agricultural records on Himachal's apple harvest season (https://pmc.ncbi.nlm.nih.gov/articles/PMC3813512/), and it lines up with when Vedanta's own trees are ready.",
       "Outside those two windows, the orchard doesn't shut down — it just changes character. Through the monsoon months the rows turn a deep, saturated green, and in winter, snow settles on bare branches for a stark, quiet kind of scenery that's its own reason to walk through. There's no dead season here, only a different mood depending on when you arrive.",
       "A Sample Day: Forest, Orchard, and Quiet. A day built around this side of Vedanta doesn't need much planning, which is exactly the appeal. It might start with a dawn forest walk while the mist is still low and the light is grey-blue and soft — thirty-five minutes, no itinerary, back before the property's kitchen has even finished laying out breakfast. Breakfast itself happens at an unhurried pace, often with a view back toward the treeline you just walked through.",
-      "Later in the day, once the sun's higher and the orchard's warmed up, that's the natural time to wander down among the apple trees — whether that means photographing blossoms in spring or filling a small basket in harvest season. There's no fixed slot for this; it happens when guests feel like it, which is really the whole point of a nature retreat Kufri visitors choose Vedanta for instead of a scheduled sightseeing package. The day tends to close on the villa deck as evening light drops through the pine cover one more time, this time in gold rather than grey. It's a rhythm, not a checklist — closer to what a private Himalayan retreat should feel like (https://www.vedantabyvaishnogroup.com/blogs/what-a-private-himalayan-retreat-should-feel-like) actually describes than anything sold as a \"sightseeing day\" elsewhere in Kufri. Guests staying in Vedanta's private villas overlooking the orchard (https://www.vedantabyvaishnogroup.com/villas) get this rhythm as a default, not an upgrade.",
+      "Later in the day, once the sun's higher and the orchard's warmed up, that's the natural time to wander down among the apple trees — whether that means photographing blossoms in spring or filling a small basket in harvest season. There's no fixed slot for this; it happens when guests feel like it, which is really the whole point of a nature retreat Kufri visitors choose Vedanta for instead of a scheduled sightseeing package. The day tends to close on the villa deck as evening light drops through the pine cover one more time, this time in gold rather than grey. It's a rhythm, not a checklist — closer to what a private Himalayan retreat should feel like (https://www.vedantabyvaishnogroup.com/blogs/what-a-private-himalayan-retreat-should-feel-like) actually describes than anything sold as a \"sightseeing day\" elsewhere in Kufri. Guests staying in Vedanta's private villas overlooking the orchard (https://www.vedantabyvaishnogroup.com/luxury-villas-in-kufri) get this rhythm as a default, not an upgrade.",
       "Photography & Sensory Moments Guests Love. The moments that end up on guests' phones aren't staged — they're the small, specific things this kind of access makes possible. Dew sitting on a blossom petal at 7am before anyone else has walked past it. Sunlight breaking through the pine canopy in individual shafts, not the flat overcast light you get at a crowded public viewpoint mid-morning. The particular pink-orange of dusk settling behind rows of apple trees in late September, right as harvest is winding down.",
       "None of this requires a professional camera. A phone held steady during that first hour after sunrise, when the mist hasn't fully lifted and the light is still soft and directional, will outperform a midday shot from any public lookout point nearby. The advantage isn't better light in some abstract sense — it's having the trail and the orchard empty enough to actually compose a shot without three other groups walking into frame.",
       "Best Time of Year to Visit for This Experience. Thinking specifically about the forest and orchard, rather than Kufri in general, the year breaks into four fairly distinct windows. Spring (March–April) is blossom season in the orchard and also when the forest floor starts showing new undergrowth after winter — arguably the single best stretch for photography. Summer (May–July) brings the mildest, most comfortable walking weather, with the forest at its most lush and green, though this is before fruit has properly formed. Monsoon (July–August) turns everything a deeper, saturated green and the mist in the forest gets thicker and lingers longer, which some guests actually prefer for atmosphere over clear visibility. Autumn (August–October) is harvest time in the orchard and also when the forest light turns crisp and golden — arguably the most complete version of this experience, since both the orchard and the trail peak at once. Winter (December–February) strips it back to something starker: snow-laced branches, quiet forest walks in cold, clean air, and an orchard that's dormant but scenic in its own bare way.",
@@ -1245,7 +1559,7 @@ export const BLOGS = [
       "This guide is built around that idea. Instead of listing attractions that stay the same all year, it maps each season at Kufri to the kind of weekend it actually delivers — and to the private villa and orchard experience that shapes it — so you can pick your dates around the trip you actually want, not just the trip that's available.",
       "Why Season Matters More Than the Destination for a Kufri Weekend. Search \"things to do in Shimla\" and you'll get the same list regardless of when you're going — Mall Road, the Ridge, Jakhu Temple, the toy train, a day trip to Kufri for the ropeway and the snow point. None of it tells you whether your specific weekend will be warm or freezing, crowded or empty, blooming or bare.",
       "That gap matters more for Kufri than for most hill destinations, because a weekend trip here is short — typically two nights, sometimes three. There's no room to \"wait out\" bad weather or a closed road the way you might on a ten-day trip. Whatever the season is doing when you arrive is the trip you're going to have. A private villa stay makes this even more pronounced: when your evenings are spent on a terrace, in a garden, or by an orchard rather than moving between hotel lobbies and restaurants, the season isn't a backdrop to your trip — it's most of the experience.",
-      "That's the lens for the four sections ahead: winter, summer, monsoon, and autumn, each mapped to what a weekend at private villas at Vedanta (https://www.vedantabyvaishnogroup.com/villas) actually looks like during that window. Worth bookmarking this one — since Kufri's character shifts every few months, it's a guide you'll likely want to revisit each time you're planning your next trip rather than something you read once.",
+      "That's the lens for the four sections ahead: winter, summer, monsoon, and autumn, each mapped to what a weekend at private villas at Vedanta (https://www.vedantabyvaishnogroup.com/luxury-villas-in-kufri) actually looks like during that window. Worth bookmarking this one — since Kufri's character shifts every few months, it's a guide you'll likely want to revisit each time you're planning your next trip rather than something you read once.",
       "Winter in Kufri: Snow Season Weekend Getaway (Dec–Feb). Kufri sits higher than Shimla town, which means it tends to catch snow earlier and hold it longer — often when Shimla itself is only seeing rain or slush. Snowfall is likeliest from late December through February, with January generally the most reliable month if snow is the whole point of your trip.",
       "A winter weekend Shimla getaway built around Kufri looks very different depending on where you stay. The public snow point near Kufri gets busy fast on weekends — coach parties, queues for yak rides and sledging, a lot of noise for what's meant to be a quiet escape. A private villa weekend flips that entirely: snow visible from your own room, a fireplace instead of a shared lounge, breakfast timed to whenever you actually wake up rather than a buffet schedule. For couples or small groups from Delhi or Chandigarh who want the feeling of a proper winter escape without committing to a long Himachal circuit, this is the version of Kufri that delivers it in two nights.",
       "For a fuller sense of what that slower pace actually feels like day to day, a slow winter weekend at Vedanta (https://www.vedantabyvaishnogroup.com/blogs/a-slow-winter-weekend-at-vedanta) walks through one such stay in detail.",
@@ -1267,7 +1581,7 @@ export const BLOGS = [
       "Want orchards, harvest, and the clearest mountain views of the year? October and November are hard to beat, and arguably the most underrated of the four windows.",
       "For a more detailed breakdown built specifically around villa stays rather than general tourism, best time to visit Kufri for a private stay (https://www.vedantabyvaishnogroup.com/blogs/best-time-to-visit-kufri-for-a-private-stay) goes deeper into this exact question.",
       "Planning Your Weekend at Vedanta. Whichever season you land on, the thread running through all four is the same: a hotel room gives you a view of the season, a private villa gives you the season itself, from your own terrace, garden, or orchard path, without sharing it with a lobby full of other guests. That's true of a fireplace in January as much as it is of harvest walks in October.",
-      "If you already know your season, the next step is simple — check dates at the private villas at Vedanta (https://www.vedantabyvaishnogroup.com/villas) and lock in your weekend before the good windows fill up, particularly for peak summer and winter dates. If you're still deciding between seasons, or want help matching a specific date range to what Kufri will actually look like then, enquire about your seasonal stay (https://www.vedantabyvaishnogroup.com/contact) and get a straight answer before you book.",
+      "If you already know your season, the next step is simple — check dates at the private villas at Vedanta (https://www.vedantabyvaishnogroup.com/luxury-villas-in-kufri) and lock in your weekend before the good windows fill up, particularly for peak summer and winter dates. If you're still deciding between seasons, or want help matching a specific date range to what Kufri will actually look like then, enquire about your seasonal stay (https://www.vedantabyvaishnogroup.com/contact) and get a straight answer before you book.",
       "Frequently Asked Questions.",
       "What is the best month for snow in Kufri? January is generally the most reliable month for snow in Kufri, with snowfall often starting in late December and continuing into early February. Kufri tends to see and hold snow earlier than Shimla town itself due to its higher elevation, so a January weekend gives the best odds of a proper snow experience.",
       "Is it safe to visit Kufri during monsoon? It can be, with some caution. Roads around Kufri and Shimla carry landslide risk during heavy monsoon downpours, especially mid-July through August. Traveling in early July or September, checking road advisories before you leave, and building flexibility into your travel time make a monsoon visit reasonably safe and genuinely rewarding.",

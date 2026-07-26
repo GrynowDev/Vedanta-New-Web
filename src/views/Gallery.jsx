@@ -12,9 +12,17 @@ export default function Gallery() {
   const items = cat === "All" ? GALLERY : GALLERY.filter((g) => g.cat === cat);
 
   return (
-    <div className="bg-forest-deep px-6 pb-28 pt-36 sm:px-10 lg:pt-44" data-testid="gallery-page">
-      <div className="mx-auto max-w-[1500px]">
-        <div className="mx-auto max-w-2xl text-center">
+    <div className="bg-forest-deep pb-28" data-testid="gallery-page">
+      <section
+        className="relative overflow-hidden px-6 pb-16 pt-36 sm:px-10 sm:pb-20 lg:pt-44"
+        style={{
+          backgroundImage: "url(/Homepage/reserve.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-forest-deep/65" aria-hidden="true" />
+        <div className="relative mx-auto max-w-2xl text-center">
           <Reveal><Overline>Gallery</Overline></Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
@@ -22,8 +30,10 @@ export default function Gallery() {
             </h1>
           </Reveal>
         </div>
+      </section>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-3">
+      <div className="mx-auto max-w-[1500px] px-6 sm:px-10">
+        <div className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-14">
           {CATS.map((c) => (
             <button
               key={c}

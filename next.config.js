@@ -12,4 +12,13 @@ module.exports = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/villas",
+        destination: "/luxury-villas-in-kufri",
+        permanent: true,
+      },
+    ];
+  },
 };

@@ -160,7 +160,7 @@ function Hero() {
               </button>
               <button
                 data-testid="hero-explore-btn"
-                onClick={() => router.push("/villas")}
+                onClick={() => router.push("/luxury-villas-in-kufri")}
                 className="group inline-flex items-center gap-2 font-body text-sm font-medium text-ivory transition-colors duration-200 hover:text-ivory/80"
               >
                 View Residences
@@ -395,7 +395,7 @@ function Villas() {
             <Reveal delay={0.26}>
               <button
                 data-testid="villas-explore-btn"
-                onClick={() => router.push("/villas")}
+                onClick={() => router.push("/luxury-villas-in-kufri")}
                 className="group mt-10 inline-flex items-center gap-3 font-body text-xs uppercase tracking-[0.25em] text-gold transition-colors duration-300 hover:text-ivory"
               >
                 See the Residences
@@ -560,13 +560,13 @@ function ResidenceShowcase() {
             <Reveal key={residence.slug} delay={0.08 * i}>
               <CollectionCard
                 item={residence}
-                onClick={() => router.push("/villas")}
+                onClick={() => router.push("/luxury-villas-in-kufri")}
               />
             </Reveal>
           ))}
         </div>
 
-        <CollectionSeeAll onClick={() => router.push("/villas")} />
+        <CollectionSeeAll onClick={() => router.push("/luxury-villas-in-kufri")} />
       </div>
     </section>
   );
