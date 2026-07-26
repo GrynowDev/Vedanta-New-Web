@@ -140,7 +140,7 @@ export default function BlogPost({ post, related = [] }) {
             return (
               <Reveal key={i} delay={delay}>
                 <h2 className="pt-6 font-serif-display text-3xl font-light leading-snug text-ivory sm:text-4xl">
-                  <InlineText text={block.h2} />
+                  {block.h2}
                 </h2>
               </Reveal>
             );
@@ -150,7 +150,7 @@ export default function BlogPost({ post, related = [] }) {
             return (
               <Reveal key={i} delay={delay}>
                 <h3 className="pt-3 font-serif-display text-2xl font-light leading-snug text-gold">
-                  <InlineText text={block.h3} />
+                  {block.h3}
                 </h3>
               </Reveal>
             );
