@@ -24,7 +24,7 @@ export default function ThankYou() {
 
         <Reveal delay={0.1}>
           <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-6xl">
-            Thank you.
+            Thank You.
           </h1>
         </Reveal>
 

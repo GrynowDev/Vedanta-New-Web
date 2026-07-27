@@ -278,7 +278,7 @@ export const LUXURY_VILLAS = [
 
 export const VILLA_AMENITY_GROUPS = [
   {
-    title: "Comfort and entertainment",
+    title: "Comfort And Entertainment",
     items: [
       "Double-height living room with a private bar lounge",
       "Gaming lounge, library lounge and a glass conservatory",
@@ -296,7 +296,7 @@ export const VILLA_AMENITY_GROUPS = [
     ],
   },
   {
-    title: "Finishes and fittings",
+    title: "Finishes And Fittings",
     items: [
       "Italian and Turkish stone on floors and walls, engineered wood in living areas",
       "Full-height teakwood wardrobes with lockers in every bedroom",
@@ -306,7 +306,7 @@ export const VILLA_AMENITY_GROUPS = [
     ],
   },
   {
-    title: "Climate, safety and structure",
+    title: "Climate, Safety And Structure",
     items: [
       "Mitsubishi VRF air conditioning throughout, hot and cold",
       "Basic smart-home package for lighting and AC",
@@ -316,7 +316,7 @@ export const VILLA_AMENITY_GROUPS = [
     ],
   },
   {
-    title: "Across the gated community",
+    title: "Across The Gated Community",
     items: [
       "Three-tier security, secured boundary and CCTV surveillance",
       "Golf cart to move around the township",
@@ -366,7 +366,7 @@ export const VILLA_NEARBY = [
     img: "/nearby/indira-tourist-park.png",
   },
   {
-    title: "Apple orchards & trails",
+    title: "Apple Orchards & Trails",
     text: "Quiet walks through orchards and forest around Kufri — usually back in time for lunch.",
     img: "/nearby/apple-orchards.png",
   },
@@ -375,12 +375,12 @@ export const VILLA_NEARBY = [
 export const VILLA_SEASONS = [
   {
     title: "December – February",
-    label: "Snow season",
+    label: "Snow Season",
     text: "Kufri turns white and skiing and snow play open up. The coldest stretch — villa heating matters most. Roads can be affected after heavy snowfall.",
   },
   {
     title: "March – June",
-    label: "Summer escape",
+    label: "Summer Escape",
     text: "Days are pleasant, valleys are green, and this is the busiest booking window. Plan ahead.",
   },
   {
@@ -390,7 +390,7 @@ export const VILLA_SEASONS = [
   },
   {
     title: "October – November",
-    label: "Clear skies",
+    label: "Clear Skies",
     text: "Quieter months with crisp air and open views. A good choice if you want the hills without peak-season crowds.",
   },
 ];
@@ -405,39 +405,39 @@ export const VILLA_SUITS = [
 
 export const VILLA_FAQS = [
   {
-    q: "Is the villa fully private or shared?",
+    q: "Is The Villa Fully Private Or Shared?",
     a: "Each villa is booked as a whole. You get the entire property to yourself, with no shared rooms or common areas.",
   },
   {
-    q: "Is food included in the tariff?",
+    q: "Is Food Included In The Tariff?",
     a: "An in-house cook prepares home-style meals. The cooking service is included, while grocery costs are usually billed separately. We confirm the exact arrangement at the time of booking.",
   },
   {
-    q: "What are the check-in and check-out times?",
+    q: "What Are The Check-In And Check-Out Times?",
     a: "Standard check-in is 2:00 PM and check-out is 11:00 AM. Early check-in or late check-out can be arranged on request, subject to availability.",
   },
   {
-    q: "Is there a minimum stay?",
+    q: "Is There A Minimum Stay?",
     a: "A two-night minimum applies on weekends and during peak season. Mid-week stays can be more flexible — ask when you enquire.",
   },
   {
-    q: "Will I get snow during my stay?",
+    q: "Will I Get Snow During My Stay?",
     a: "Snowfall is most likely between December and February, though it varies year to year and cannot be guaranteed. October to November and March offer clear views without the crowds.",
   },
   {
-    q: "Are the villas suitable for kids and elderly guests?",
+    q: "Are The Villas Suitable For Kids And Elderly Guests?",
     a: "Yes. Being a single private property with a caretaker on site, our villas suit families travelling with children and older members. Let us know of any specific access needs when you book.",
   },
   {
-    q: "Is parking available?",
+    q: "Is Parking Available?",
     a: "Yes, free parking is available on the property — gated parking for two cars per villa. Share your vehicle count so we can plan space.",
   },
   {
-    q: "What is the cancellation policy?",
+    q: "What Is The Cancellation Policy?",
     a: "Cancellation and refund terms depend on season and how far ahead you book. We share the exact policy in writing before you confirm.",
   },
   {
-    q: "How far is the villa from Shimla?",
+    q: "How Far Is The Villa From Shimla?",
     a: "Kufri is around 15 km from Shimla, roughly a 45-minute to one-hour drive on NH5.",
   },
 ];

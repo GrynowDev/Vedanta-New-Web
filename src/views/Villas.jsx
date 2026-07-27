@@ -128,7 +128,7 @@ export default function Villas() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-6 max-w-4xl font-serif-display text-5xl font-light leading-[1.02] tracking-tight text-ivory sm:text-6xl lg:text-7xl xl:text-8xl">
-              Luxury Villas in Kufri
+              Luxury Villas In Kufri
             </h1>
           </Reveal>
 
@@ -173,48 +173,6 @@ export default function Villas() {
         </motion.div>
       </section>
 
-      {/* WHY STAY */}
-      <section className="px-6 py-20 sm:px-10 lg:py-28" data-testid="why-villa">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="max-w-3xl">
-            <Reveal>
-              <Overline>Why a villa</Overline>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl lg:text-6xl">
-                Why stay in a villa in Kufri
-              </h2>
-            </Reveal>
-            <Reveal delay={0.14}>
-              <p className="mt-6 font-body text-base font-light leading-relaxed text-ivory/65 sm:text-lg">
-                A private luxury villa suits the kind of trip most people come
-                to Kufri for — space, privacy, and the hills right outside the
-                window. Kufri is colder than Shimla through most of the year, so
-                heated, well-insulated rooms make a real difference in winter.
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:gap-10">
-            {WHY_POINTS.map((point, i) => (
-              <Reveal key={point.title} delay={0.06 * i}>
-                <article className="border-t border-gold/25 pt-8">
-                  <span className="font-body text-[11px] uppercase tracking-[0.28em] text-gold">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-4 font-serif-display text-2xl font-light text-ivory sm:text-3xl">
-                    {point.title}
-                  </h3>
-                  <p className="mt-4 font-body text-base font-light leading-relaxed text-ivory/65">
-                    {point.text}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* VILLA INVENTORY */}
       <section
         id="villas"
@@ -228,7 +186,7 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl lg:text-6xl">
-                Our luxury private villas in Kufri
+                Our Luxury Private Residences In Kufri
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
@@ -350,7 +308,7 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-                Villa amenities
+                Villa Amenities
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
@@ -403,9 +361,9 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-6xl">
-                The days do less.
+                The Days Do Less.
                 <br />
-                You feel more.
+                You Feel More.
               </h2>
             </Reveal>
             <Reveal delay={0.18}>
@@ -462,7 +420,7 @@ export default function Villas() {
           <Reveal className="lg:col-span-5">
             <Overline>Location</Overline>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-              Where the villas are — and how to reach
+              Where The Villas Are — And How To Reach
             </h2>
             <p className="mt-6 font-body text-base font-light leading-relaxed text-ivory/65 sm:text-lg">
               Kufri is around 15 km from Shimla on National Highway 5, the old
@@ -479,15 +437,15 @@ export default function Villas() {
           <div className="space-y-6 lg:col-span-7">
             {[
               {
-                title: "By air",
+                title: "By Air",
                 text: "Nearest airport is Shimla Airport at Jubbarhatti. Most travellers fly into Chandigarh and drive up — far more flight options.",
               },
               {
-                title: "By train",
+                title: "By Train",
                 text: "Nearest broad-gauge station is Kalka. Take the toy train to Shimla or drive straight up — Kalka to Kufri is around 105 km.",
               },
               {
-                title: "By road",
+                title: "By Road",
                 text: "Well connected from Chandigarh (about 6–7 hours) and Delhi (about 9–10 hours). Roads can be slow in peak season and after snowfall — plan check-in for daylight where possible.",
               },
             ].map((row, i) => (
@@ -518,7 +476,7 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-                Things to do near the villa
+                Things To Do Near The Villa
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
@@ -568,7 +526,7 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-                Best time to visit Kufri
+                Best Time To Visit Kufri
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
@@ -618,7 +576,7 @@ export default function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-                Who these villas suit
+                Who These Villas Suit
               </h2>
             </Reveal>
             <ul className="mt-10 space-y-5">
@@ -657,7 +615,7 @@ export default function Villas() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-              Guest reviews
+              Guest Reviews
             </h2>
           </Reveal>
 
@@ -691,7 +649,7 @@ export default function Villas() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl">
-              Frequently asked questions
+              Frequently Asked Questions
             </h2>
           </Reveal>
 
@@ -729,7 +687,7 @@ export default function Villas() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.1] text-ivory sm:text-5xl lg:text-6xl">
-              Ready to book your villa in Kufri?
+              Ready To Book Your Villa In Kufri?
             </h2>
           </Reveal>
           <Reveal delay={0.14}>

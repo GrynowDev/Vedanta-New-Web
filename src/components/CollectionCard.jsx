@@ -62,9 +62,9 @@ export function CollectionHeader() {
       </Reveal>
       <Reveal delay={0.06}>
         <SectionTitle className="mt-6 text-center">
-          Step inside,
+          Step Inside,
           <br />
-          and exhale.
+          And Exhale.
         </SectionTitle>
       </Reveal>
       <Reveal delay={0.1}>

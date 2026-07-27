@@ -25,6 +25,7 @@ export default function Footer() {
               <li><Link href="/luxury-villas-in-kufri" className="link-underline hover:text-ivory">The Villas</Link></li>
               <li><Link href="/gallery" className="link-underline hover:text-ivory">Gallery</Link></li>
               <li><Link href="/blogs" className="link-underline hover:text-ivory">Blog</Link></li>
+              <li><Link href="/about-us" className="link-underline hover:text-ivory">About Us</Link></li>
               <li><Link href="/contact" className="link-underline hover:text-ivory">Contact</Link></li>
             </ul>
           </div>

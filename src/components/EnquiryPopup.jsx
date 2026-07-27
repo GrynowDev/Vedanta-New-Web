@@ -145,9 +145,9 @@ export default function EnquiryPopup({ autoOpenDelay = 6000, autoOpen = true }) 
               </span>
 
               <h2 className="relative mt-8 font-serif-display text-[34px] font-medium leading-[1.02] tracking-[0.01em] md:mt-auto lg:text-[46px]">
-                Come back to
+                Come Back To
                 <br />
-                <em className="italic text-brass-soft">yourself.</em>
+                <em className="italic text-brass-soft">Yourself.</em>
               </h2>
 
               <p className="relative mt-4 font-body text-[14.5px] font-light leading-relaxed text-parchment/[0.78]">

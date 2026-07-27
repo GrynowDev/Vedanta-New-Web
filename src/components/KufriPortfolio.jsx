@@ -7,27 +7,27 @@ import { Reveal } from "./Reveal";
 
 const PANEL = {
   all: {
-    title: "Some places become famous. Kufri became timeless.",
+    title: "Some Places Become Famous. Kufri Became Timeless.",
     text: "Mist drifts through the valley. The forest breathes deep, green and alive.",
     cta: "Explore Kufri",
   },
   summer: {
-    title: "Summer in Kufri",
+    title: "Summer In Kufri",
     text: "Cool 20°C days, apple orchards in bloom, and endless golden evenings on the deck.",
     cta: "Explore Summer",
   },
   winter: {
-    title: "Winter in Kufri",
+    title: "Winter In Kufri",
     text: "Snowfall blankets the pines. Fireside afternoons and crystalline mountain silence.",
     cta: "Explore Winter",
   },
   spring: {
-    title: "Spring in Kufri",
+    title: "Spring In Kufri",
     text: "Rhododendrons ignite the hills. Meadows awaken in soft, deliberate colour.",
     cta: "Explore Spring",
   },
   monsoon: {
-    title: "Monsoon in Kufri",
+    title: "Monsoon In Kufri",
     text: "Mist drifts through the valley. The forest breathes deep, green and alive.",
     cta: "Explore Monsoon",
   },
