@@ -747,8 +747,7 @@ export const DESTINATION_FILTERS = [
 const PLACE_IMAGES = [
   "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
-  "/Homepage/oberoi-wild-flower-hall.webp",
-  "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80",
+  "/Homepage/sunset-point.jpg",
   "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
@@ -769,7 +768,6 @@ const PLACE_IMAGES = [
 export const VICINITY = [
   { name: "Hip Hip Hurray Adventure Park", distance: "5 Km", time: "8 Mins", category: "nearby" },
   { name: "Kufri Fun World", distance: "5 Km", time: "8 Mins", category: "nearby" },
-  { name: "Oberoi Wild Flower Hall", distance: "7 Km", time: "12 Mins", category: "nearby" },
   { name: "Sun Rise/Set Point", distance: "6 Km", time: "9 Mins", category: "nearby" },
   { name: "Kufri City", distance: "4 Km", time: "8 Mins", category: "nearby" },
   { name: "Helipad", distance: "15 Km", time: "20 Mins", category: "shimla" },
