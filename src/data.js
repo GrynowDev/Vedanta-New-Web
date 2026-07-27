@@ -747,7 +747,7 @@ export const DESTINATION_FILTERS = [
 const PLACE_IMAGES = [
   "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1478131143081-80f7f84ca84a?auto=format&fit=crop&w=800&q=80",
+  "/Homepage/oberoi-wild-flower-hall.webp",
   "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
@@ -756,8 +756,8 @@ const PLACE_IMAGES = [
   "/brochure/villa-day.jpg",
   "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80",
+  "/Homepage/homestays-in-chail.jpg",
+  "/Homepage/Narkanda.webp",
   "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
@@ -767,16 +767,11 @@ const PLACE_IMAGES = [
 
 /** Vicinity — “Uniting Urban Indulgences” distances table */
 export const VICINITY = [
-  { name: "Sterling Resorts", distance: "3 Km", time: "5 Mins", category: "nearby" },
-  { name: "Royal Tulip", distance: "5 Km", time: "8 Mins", category: "nearby" },
   { name: "Hip Hip Hurray Adventure Park", distance: "5 Km", time: "8 Mins", category: "nearby" },
   { name: "Kufri Fun World", distance: "5 Km", time: "8 Mins", category: "nearby" },
-  { name: "Raddison Hotel", distance: "6 Km", time: "10 Mins", category: "nearby" },
   { name: "Oberoi Wild Flower Hall", distance: "7 Km", time: "12 Mins", category: "nearby" },
-  { name: "Taj Hotel", distance: "9 Km", time: "15 Mins", category: "nearby" },
   { name: "Sun Rise/Set Point", distance: "6 Km", time: "9 Mins", category: "nearby" },
   { name: "Kufri City", distance: "4 Km", time: "8 Mins", category: "nearby" },
-  { name: "Mahindras", distance: "4 Km", time: "7 Mins", category: "nearby" },
   { name: "Helipad", distance: "15 Km", time: "20 Mins", category: "shimla" },
   { name: "The Ridge Mall Road", distance: "15 Km", time: "30 Mins", category: "shimla" },
   { name: "Shimla City", distance: "20 Km", time: "45 Mins", category: "shimla" },
