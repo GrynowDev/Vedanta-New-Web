@@ -588,16 +588,16 @@ export default function Home() {
         subtitle="Trusted sanctuary for immersive stays, private ownership, and life above the valley — crafted with care in Kufri."
       />
       <PropertyMarquee items={PROPERTY_MARQUEE} />
-      <DestinationsEscape
-        filters={DESTINATION_FILTERS}
-        destinations={DESTINATIONS}
-      />
       <Philosophy />
       <Villas />
       <ResidenceShowcase />
       <WhyKufri />
       <ExperienceWellbeing />
       <Sustainability />
+      <DestinationsEscape
+        filters={DESTINATION_FILTERS}
+        destinations={DESTINATIONS}
+      />
       <TestimonialsSection items={TESTIMONIALS} />
       <ContactSection />
       <EnquiryPopup />
