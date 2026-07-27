@@ -26,7 +26,7 @@ export default function Gallery() {
           <Reveal><Overline>Gallery</Overline></Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
-              An editorial of stillness.
+              An Editorial Of Stillness.
             </h1>
           </Reveal>
         </div>

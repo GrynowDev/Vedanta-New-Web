@@ -18,7 +18,7 @@ export default function Contact() {
           <Reveal><Overline>Reservations</Overline></Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
-              Plan your stay.
+              Plan Your Stay.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>

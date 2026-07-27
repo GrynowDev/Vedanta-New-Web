@@ -202,9 +202,8 @@ function Philosophy() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.08] tracking-tight text-ivory sm:text-5xl lg:text-6xl xl:text-7xl">
-              Luxury changed
-              <br />
-              its mind.
+              More Than A Stay.
+              <br />A Life Designed To Heal.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -281,9 +280,9 @@ function ExperienceWellbeing() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-6xl">
-              The days do less.
+              The Days Do Less.
               <br />
-              You feel more.
+              You Feel More.
             </h2>
           </Reveal>
           <Reveal delay={0.18}>
@@ -354,9 +353,9 @@ function Villas() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-[3.4rem] lg:leading-[1.12]">
-                Rooms that remember
+                Not Built Around Nature.
                 <br />
-                how to be quiet.
+                Built Within It.
               </h2>
             </Reveal>
 
@@ -436,9 +435,9 @@ function Sustainability() {
           </Reveal>
           <Reveal delay={0.06}>
             <SectionTitle className="mt-6">
-              We arrived quietly.
+              The Last Luxury
               <br />
-              We intend to stay that way.
+              Left Is Peace.
             </SectionTitle>
           </Reveal>
           <Reveal delay={0.1}>
@@ -500,9 +499,9 @@ function ContactSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
-              Reserve your
+              Reserve Your
               <br />
-              mountain retreat.
+              Mountain Retreat.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -533,7 +532,10 @@ function ContactSection() {
             </a>
           </div>
         </div>
-        <Reveal delay={0.2} className="rounded-[4px] bg-parchment p-8 shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:p-10">
+        <Reveal
+          delay={0.2}
+          className="rounded-[4px] bg-parchment p-8 shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:p-10"
+        >
           <EnquiryForm idPrefix="home-enq" testId="enquiry-form" />
         </Reveal>
       </div>
@@ -566,7 +568,9 @@ function ResidenceShowcase() {
           ))}
         </div>
 
-        <CollectionSeeAll onClick={() => router.push("/luxury-villas-in-kufri")} />
+        <CollectionSeeAll
+          onClick={() => router.push("/luxury-villas-in-kufri")}
+        />
       </div>
     </section>
   );
@@ -580,7 +584,7 @@ export default function Home() {
       <TrustStats
         stats={TRUST_STATS}
         heroImage={BROCHURE.villaTwilight}
-        title="Why Vedanta is Your Trusted Himalayan Retreat"
+        title="A Paradise in Heaven."
         subtitle="Trusted sanctuary for immersive stays, private ownership, and life above the valley — crafted with care in Kufri."
       />
       <PropertyMarquee items={PROPERTY_MARQUEE} />

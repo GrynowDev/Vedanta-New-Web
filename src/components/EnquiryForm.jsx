@@ -54,7 +54,7 @@ function IndiaFlag() {
  */
 export default function EnquiryForm({
   idPrefix = "enq",
-  title = "Plan your retreat",
+  title = "Plan Your Retreat",
   intro = "A minute now, and a quiet reply from our concierge.",
   showHeader = true,
   nameRef: externalNameRef,

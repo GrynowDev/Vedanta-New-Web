@@ -26,7 +26,7 @@ export default function Blogs() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
-              Stories from the mountain.
+              Stories From The Mountain.
             </h1>
           </Reveal>
           <Reveal delay={0.15}>

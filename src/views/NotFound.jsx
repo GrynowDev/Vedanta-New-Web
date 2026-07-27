@@ -11,7 +11,7 @@ export default function NotFound() {
         <Reveal><Overline>404 — Off the Trail</Overline></Reveal>
         <Reveal delay={0.1}>
           <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
-            This path leads<br />into the fog.
+            This Path Leads<br />Into The Fog.
           </h1>
         </Reveal>
         <Reveal delay={0.2}>

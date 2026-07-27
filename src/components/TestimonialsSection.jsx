@@ -80,9 +80,9 @@ export default function TestimonialsSection({ items }) {
           </Reveal>
           <Reveal delay={0.06}>
             <SectionTitle className="mt-6 text-center">
-              Real experiences, real trust —
+              Real Experiences, Real Trust —
               <br />
-              Himalayan retreats you can rely on
+              Himalayan Retreats You Can Rely On
             </SectionTitle>
           </Reveal>
           <Reveal delay={0.1}>
