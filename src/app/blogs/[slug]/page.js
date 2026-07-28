@@ -1,12 +1,18 @@
+import { notFound } from "next/navigation";
 import BlogPost from "@/views/BlogPost";
 import { BLOGS, getBlogBySlug } from "@/data";
 
-const SLUG = "rera-registered-villa-in-kufri-own-a-villa-himachal-pradesh";
-const post = getBlogBySlug(SLUG);
-
 export const dynamic = "force-static";
+export const dynamicParams = false;
 
-export function generateMetadata() {
+export function generateStaticParams() {
+  return BLOGS.map((post) => ({ slug: post.slug }));
+}
+
+export function generateMetadata({ params }) {
+  const post = getBlogBySlug(params.slug);
+  if (!post) return {};
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -30,7 +36,10 @@ export function generateMetadata() {
   };
 }
 
-export default function Page() {
+export default function Page({ params }) {
+  const post = getBlogBySlug(params.slug);
+  if (!post) notFound();
+
   const related = BLOGS.filter((b) => b.slug !== post.slug).slice(0, 3);
   return <BlogPost post={post} related={related} />;
 }
