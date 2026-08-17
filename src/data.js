@@ -1139,7 +1139,8 @@ export const CONTACT = {
   phone: "+91 99174 86405",
   phoneAlt: "+91 92199 40481",
   email: "concierge@vedantakufri.com",
-  address: "Vedanta, Kufri, Shimla, Himachal Pradesh, India",
+  address:
+    "Vedanta Villas, Village and Post Office Cheog, Tehsil Theog, Shimla, Himachal Pradesh, pin code 171209",
 };
 
 export const BLOGS = [

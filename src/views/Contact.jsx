@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
-import { Reveal, Overline } from "../components/Reveal";
+import { Reveal } from "../components/Reveal";
 import EnquiryForm from "../components/EnquiryForm";
 import { MEDIA, CONTACT } from "../data";
 
@@ -14,22 +14,7 @@ export default function Contact() {
   return (
     <div className="bg-forest-deep px-6 pb-28 pt-36 sm:px-10 lg:pt-44" data-testid="contact-page">
       <div className="mx-auto max-w-[1400px]">
-        <div className="max-w-3xl">
-          <Reveal><Overline>Reservations</Overline></Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mt-6 font-serif-display text-5xl font-light leading-none text-ivory sm:text-7xl">
-              Plan Your Stay.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-8 max-w-xl font-body text-lg font-light leading-relaxed text-ivory/70">
-              Share your dates and our concierge will confirm availability and craft your retreat —
-              from a quiet weekend to a longer season of stillness in the Himalayas.
-            </p>
-          </Reveal>
-        </div>
-
-        <div className="mt-20 grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           <div>
             <div className="img-zoom-wrap rounded-3xl">
               <img src={MEDIA.heroMountains} alt="Vedanta location" className="img-zoom h-80 w-full rounded-3xl object-cover" />

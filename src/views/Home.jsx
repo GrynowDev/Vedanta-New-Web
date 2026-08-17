@@ -497,17 +497,8 @@ function ContactSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
-              Reserve Your
-              <br />
-              Mountain Retreat.
+              Contact us
             </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-8 max-w-md font-body text-lg font-light leading-relaxed text-ivory/70">
-              Share your dates and our concierge will confirm availability and
-              craft your stay — from a quiet weekend to a longer season of
-              retreat.
-            </p>
           </Reveal>
           <div className="mt-12 space-y-4 font-body text-sm text-ivory/70">
             <p>

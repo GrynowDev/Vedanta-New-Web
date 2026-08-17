@@ -49,7 +49,7 @@ function IndiaFlag() {
  */
 export default function EnquiryForm({
   idPrefix = "enq",
-  title = "Contact us",
+  title = "Get in touch",
   intro = "A minute now, and a quiet reply from our concierge.",
   showHeader = true,
   nameRef: externalNameRef,
@@ -215,7 +215,7 @@ export default function EnquiryForm({
 
         <div className="flex flex-col gap-[7px]">
           <label htmlFor={`${idPrefix}-notes`} className={labelBase}>
-            Anything else we should know?{" "}
+            Message{" "}
             <span className="font-medium normal-case tracking-normal text-sage">
               (optional)
             </span>
