@@ -492,9 +492,6 @@ function ContactSection() {
 
       <div className="relative z-10 mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
-          <Reveal>
-            <Overline>Reservations</Overline>
-          </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
               Contact us
