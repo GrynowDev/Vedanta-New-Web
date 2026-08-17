@@ -37,7 +37,6 @@ import TrustedBrands from "../components/TrustedBrands";
 import TestimonialsSection from "../components/TestimonialsSection";
 import DestinationsEscape from "../components/DestinationsEscape";
 import Snowfall from "../components/Snowfall";
-import EnquiryPopup, { openEnquiryPopup } from "../components/EnquiryPopup";
 import {
   MEDIA,
   BROCHURE,
@@ -151,13 +150,13 @@ function Hero() {
               delay={0.75}
               className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
             >
-              <button
+              <a
+                href="#contact"
                 data-testid="hero-book-btn"
-                onClick={openEnquiryPopup}
                 className="rounded-full bg-ivory px-7 py-3.5 font-body text-sm font-semibold text-forest transition-colors duration-200 hover:bg-white"
               >
                 Contact us
-              </button>
+              </a>
               <button
                 data-testid="hero-explore-btn"
                 onClick={() => router.push("/luxury-villas-in-kufri")}
@@ -202,8 +201,7 @@ function Philosophy() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-serif-display text-4xl font-light leading-[1.08] tracking-tight text-ivory sm:text-5xl lg:text-6xl xl:text-7xl">
-              More Than A Stay.
-              <br />A Life Designed To Heal.
+              A Life Designed To Heal.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -600,7 +598,6 @@ export default function Home() {
       />
       <TestimonialsSection items={TESTIMONIALS} />
       <ContactSection />
-      <EnquiryPopup />
     </>
   );
 }

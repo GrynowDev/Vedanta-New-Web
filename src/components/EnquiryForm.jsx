@@ -3,8 +3,6 @@
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const GUEST_OPTIONS = ["1 – 2", "3 – 4", "5 – 6", "7 or more"];
-
 const WEB3FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
   "8147cf74-7a1e-42f6-a622-e49f0113dc67";
@@ -13,9 +11,6 @@ const EMPTY_FORM = {
   name: "",
   phone: "",
   email: "",
-  arrive: "",
-  leave: "",
-  guests: "",
   notes: "",
 };
 
@@ -54,7 +49,7 @@ function IndiaFlag() {
  */
 export default function EnquiryForm({
   idPrefix = "enq",
-  title = "Plan Your Retreat",
+  title = "Contact us",
   intro = "A minute now, and a quiet reply from our concierge.",
   showHeader = true,
   nameRef: externalNameRef,
@@ -109,9 +104,6 @@ export default function EnquiryForm({
       formData.append("name", form.name.trim());
       formData.append("phone", `+91 ${form.phone.trim()}`);
       formData.append("email", form.email.trim() || "Not provided");
-      formData.append("arrive", form.arrive || "Not provided");
-      formData.append("leave", form.leave || "Not provided");
-      formData.append("guests", form.guests || "Not provided");
       formData.append("message", form.notes.trim() || "No additional notes");
       if (form.email.trim()) {
         formData.append("replyto", form.email.trim());
@@ -219,64 +211,6 @@ export default function EnquiryForm({
             disabled={submitting}
             className={`${fieldBase} border-ink/[0.14]`}
           />
-        </div>
-
-        <div className="grid gap-3.5 sm:grid-cols-2">
-          <div className="flex flex-col gap-[7px]">
-            <label htmlFor={`${idPrefix}-arrive`} className={labelBase}>
-              Arrive
-            </label>
-            <input
-              id={`${idPrefix}-arrive`}
-              type="date"
-              name="arrive"
-              value={form.arrive}
-              onChange={update("arrive")}
-              disabled={submitting}
-              className={`${fieldBase} border-ink/[0.14]`}
-            />
-          </div>
-          <div className="flex flex-col gap-[7px]">
-            <label htmlFor={`${idPrefix}-leave`} className={labelBase}>
-              Leave
-            </label>
-            <input
-              id={`${idPrefix}-leave`}
-              type="date"
-              name="leave"
-              min={form.arrive || undefined}
-              value={form.leave}
-              onChange={update("leave")}
-              disabled={submitting}
-              className={`${fieldBase} border-ink/[0.14]`}
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-[7px]">
-          <label htmlFor={`${idPrefix}-guests`} className={labelBase}>
-            Guests{" "}
-            <span className="font-medium normal-case tracking-normal text-sage">
-              (optional)
-            </span>
-          </label>
-          <select
-            id={`${idPrefix}-guests`}
-            name="guests"
-            value={form.guests}
-            onChange={update("guests")}
-            disabled={submitting}
-            className={`${fieldBase} appearance-none border-ink/[0.14] bg-[url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%235C6B5C' stroke-width='1.5'/></svg>")] bg-[right_14px_center] bg-no-repeat pr-9 ${
-              form.guests ? "text-ink" : "text-[#a6a598]"
-            }`}
-          >
-            <option value="">Select group size</option>
-            {GUEST_OPTIONS.map((g) => (
-              <option key={g} value={g} className="text-ink">
-                {g}
-              </option>
-            ))}
-          </select>
         </div>
 
         <div className="flex flex-col gap-[7px]">

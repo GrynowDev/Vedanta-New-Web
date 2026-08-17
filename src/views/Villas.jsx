@@ -17,7 +17,6 @@ import {
   Phone,
 } from "lucide-react";
 import { Reveal, Overline } from "../components/Reveal";
-import EnquiryPopup, { openEnquiryPopup } from "../components/EnquiryPopup";
 import {
   MEDIA,
   BROCHURE,
@@ -273,13 +272,12 @@ export default function Villas() {
                       </ul>
 
                       <div className="mt-8 flex flex-wrap gap-3">
-                        <button
-                          type="button"
-                          onClick={openEnquiryPopup}
+                        <Link
+                          href="/contact"
                           className="rounded-full bg-gold px-6 py-3 font-body text-xs font-semibold uppercase tracking-[0.18em] text-forest transition-colors hover:bg-ivory"
                         >
                           Enquire about this villa
-                        </button>
+                        </Link>
                         <Link
                           href="/gallery"
                           className="rounded-full border border-ivory/25 px-6 py-3 font-body text-xs font-semibold uppercase tracking-[0.18em] text-ivory/80 transition-colors hover:border-gold hover:text-gold"
@@ -731,8 +729,6 @@ export default function Villas() {
           </Reveal>
         </div>
       </section>
-
-      <EnquiryPopup autoOpen={false} />
     </div>
   );
 }
